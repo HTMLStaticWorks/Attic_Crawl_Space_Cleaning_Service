@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Health &amp; Air Quality Blog | Attix</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <meta name="description"
+        content="Educational guides on hidden home hazards, the stack effect, toxic black mold remediation, rodent contamination risks, and crawl space encapsulation.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <style>
+        .blog-card-img {
+            height: 240px;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.svg" alt="Attix Logo" class="me-2" style="height: 34px; width: 34px;">
+                <span class="fw-bold text-white fs-4">Att<span class="text-gradient">ix</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list text-white fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Before &amp; After</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                            RTL
+                        </button>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary-custom btn-sm d-flex align-items-center" title="Book Inspection">
+                        Book Inspection
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <header class="py-5 mt-4">
+        <div class="container pt-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <span class="badge bg-secondary-bg border border-color text-primary-accent mb-3 px-3 py-2 rounded-pill fw-bold text-uppercase tracking-wider">
+                        <i class="bi bi-journal-text me-1"></i> Environmental Science &amp; Diagnostics
+                    </span>
+                    <h1 class="display-3 fw-bold mb-4">
+                        Home Hazards &amp; <br><span class="text-gradient">Air Quality Insights</span>
+                    </h1>
+                    <p class="text-secondary lead pe-lg-4 mb-4">
+                        Expert environmental guides on eliminating hidden biological hazards, crawl space encapsulation, mold eradication, and rodent proofing.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-4">
+                        <span class="badge bg-primary-bg border border-color text-secondary px-3 py-2 rounded-pill">
+                            <i class="bi bi-wind text-primary-accent me-1"></i> The Stack Effect
+                        </span>
+                        <span class="badge bg-primary-bg border border-color text-secondary px-3 py-2 rounded-pill">
+                            <i class="bi bi-shield-x text-primary-accent me-1"></i> Rodent Biohazards
+                        </span>
+                        <span class="badge bg-primary-bg border border-color text-secondary px-3 py-2 rounded-pill">
+                            <i class="bi bi-droplet-half text-primary-accent me-1"></i> Mold &amp; Moisture
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#featured-guide" class="btn btn-primary-custom btn-lg px-4">Read Featured Article</a>
+                        <a href="contact.html" class="btn btn-outline-custom btn-lg px-4">Book Free Inspection</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="hero-img-container position-relative ps-lg-3">
+                        <div class="position-absolute rounded-circle bg-primary-accent opacity-10" style="width: 260px; height: 260px; bottom: -20px; right: -20px; filter: blur(50px); z-index: 0;"></div>
+                        
+                        <div class="float-animation position-relative z-index-1">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" 
+                                alt="Healthy Home Air Quality" class="main-hero-img img-fluid" style="height: 440px; width: 100%; object-fit: cover;">
+                        </div>
+
+                        <!-- Unique Animated Floating Badge 1: AQI Sensor -->
+                        <div class="hero-floating-badge badge-pos-top-right float-animation-reverse d-flex align-items-center gap-3">
+                            <span class="pulse-indicator"></span>
+                            <div>
+                                <div class="fw-bold text-white text-xs text-uppercase tracking-wider">Air Quality Index</div>
+                                <div class="text-primary-accent text-xs fw-bold mb-0">98/100 • Pure Indoor Air</div>
+                            </div>
+                        </div>
+
+                        <!-- Unique Animated Floating Badge 2: Stack Effect Seal -->
+                        <div class="hero-floating-badge badge-pos-bottom-left float-slow d-flex align-items-center gap-3">
+                            <div class="rounded-circle p-2 bg-secondary-bg border border-color text-primary-accent d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                <i class="bi bi-layers-half fs-5"></i>
+                            </div>
+                            <div>
+                                <div class="fw-bold text-white text-xs">Crawl Encapsulation</div>
+                                <div class="text-secondary text-xs mb-0">Blocks 40% Rising Ground Air</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Post -->
+    <section class="py-5">
+        <div class="container">
+            <div id="featured-guide" class="glass-card p-4 mb-5 border-primary-accent" style="background: rgba(10, 17, 30, 0.6); backdrop-filter: blur(20px);">
+                <div class="row g-4 align-items-center">
+                    <!-- Text details column -->
+                    <div class="col-lg-6 p-4">
+                        <span class="badge bg-primary-accent text-dark mb-3 px-3 py-2 rounded-pill fw-bold text-uppercase tracking-wider">FEATURED GUIDE</span>
+                        <h2 class="section-title text-white mb-3">The Stack Effect: Why 40% of Your Indoor Air Rises From the Crawl Space</h2>
+                        <p class="text-secondary mb-4">Discover the physics of thermal convective drafts and learn why unsealed, damp crawl spaces pull fungal mold spores, dust mite allergens, and subterranean gases directly into upper-level bedrooms.</p>
+                        
+                        <div class="d-flex flex-column flex-sm-row flex-wrap align-items-start align-items-sm-center justify-content-between p-3 rounded bg-secondary-bg border border-color gap-3">
+                            <div class="d-flex align-items-center">
+                                <img src="https://ui-avatars.com/api/?name=Marcus+Vance&background=0EA5E9&color=ffffff"
+                                    class="rounded-circle me-3" width="44" alt="Dr. Marcus Vance">
+                                <div>
+                                    <h6 class="mb-0 text-white text-nowrap">Dr. Marcus Vance</h6>
+                                    <p class="text-secondary text-xs mb-0 text-nowrap">Environmental Hygiene Lead</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between w-100 d-sm-inline-flex w-sm-auto gap-3 text-nowrap">
+                                <span class="text-secondary text-xs"><i class="bi bi-clock me-1"></i>8 min read</span>
+                                <a href="contact.html" class="btn btn-primary-custom btn-sm">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image with unique badge/caption overlay -->
+                    <div class="col-lg-6">
+                        <div class="position-relative overflow-hidden rounded-4 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800"
+                                class="img-fluid w-100" style="height: 420px; object-fit: cover;" alt="Crawl space stack effect diagnostic">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(10,17,30,0.9), transparent);">
+                                <span class="badge bg-dark border border-secondary text-white-50 px-3 py-2"><i class="bi bi-wind text-warning me-2"></i>Thermal Draft Diagnostics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Grid -->
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-4">
+                    <div class="glass-card p-0 h-100 d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600"
+                            class="blog-card-img w-100" alt="Dangers of Rodent Waste">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="text-primary-accent text-xs fw-bold mb-2 d-block">HAZARD PREVENTION</span>
+                            <h4 class="h5 mb-3">Dangers of Rodent Droppings in Attic Insulation</h4>
+                            <p class="text-secondary text-sm mb-4">Why vacuuming contaminated fiberglass with household vacuums releases airborne Hantavirus and why negative-pressure HEPA units are required.</p>
+                            <div class="mt-auto">
+                                <a href="contact.html"
+                                    class="btn btn-link text-primary-accent p-0 text-sm text-decoration-none">Read Full Post <i class="bi bi-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="glass-card p-0 h-100 d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600"
+                            class="blog-card-img w-100" alt="Signs of Damaged Insulation">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="text-primary-accent text-xs fw-bold mb-2 d-block">AIR QUALITY</span>
+                            <h4 class="h5 mb-3">5 Warning Signs Your Attic Insulation Needs Extraction</h4>
+                            <p class="text-secondary text-sm mb-4">Foul ceiling odors, mysterious morning allergy flare-ups, and sudden spikes in heating bills signify your insulation has decayed.</p>
+                            <div class="mt-auto">
+                                <a href="contact.html"
+                                    class="btn btn-link text-primary-accent p-0 text-sm text-decoration-none">Read Full Post <i class="bi bi-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="glass-card p-0 h-100 d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600"
+                            class="blog-card-img w-100" alt="Crawl Space Encapsulation">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="text-primary-accent text-xs fw-bold mb-2 d-block">MOISTURE CONTROL</span>
+                            <h4 class="h5 mb-3">Vented vs. Encapsulated Crawl Spaces: The Truth</h4>
+                            <p class="text-secondary text-sm mb-4">Why open crawl space wall vents invite humid outdoor air that condenses into wood rot, and how 20-mil sealed vapor barriers permanently protect your foundation.</p>
+                            <div class="mt-auto">
+                                <a href="contact.html"
+                                    class="btn btn-link text-primary-accent p-0 text-sm text-decoration-none">Read Full Post <i class="bi bi-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 pt-5 text-center">
+                <a href="contact.html" class="btn btn-outline-custom btn-lg">Schedule A Hazard Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NewsLetter Section -->
+    <section class="py-5 bg-secondary-bg">
+        <div class="container py-5 text-center">
+            <h2 class="display-5 mb-4">Get Seasonal <span class="text-gradient">Home Health Alerts</span></h2>
+            <p class="text-secondary max-w-600 mx-auto mb-5">Subscribe to receive seasonal pest-proofing checklists, freeze protection tips, and indoor air quality alerts.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="glass-card p-2 d-flex">
+                        <input type="email" class="form-control bg-transparent border-0 text-white shadow-none"
+                            placeholder="Enter your email address">
+                        <button class="btn btn-primary-custom ms-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5 border-top border-color">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <img src="assets/images/logo.svg" alt="Attix Logo" height="34" class="me-2">
+                        <span class="fw-bold text-white fs-4">Att<span class="text-gradient">ix</span></span>
+                    </a>
+                    <p class="text-secondary">Certified attic and crawl space decontamination, contaminated insulation extraction, hospital-grade sanitization, and guaranteed rodent-proofing for healthier indoor air.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4 social-links">
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Specialized Services</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Insulation Removal</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Sanitization &amp; Fogging</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Rodent Proofing</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Vapor Barrier Install</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Main Navigation</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Services</a></li>
+                        <li class="mb-2"><a href="portfolio.html" class="text-decoration-none text-secondary">Before &amp; After</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-decoration-none text-secondary">Pricing</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none text-secondary">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Book Free Inspection</h5>
+                    <div class="glass-card p-2 d-flex">
+                        <input type="text" class="form-control bg-transparent border-0 text-white shadow-none"
+                            placeholder="Phone or Email">
+                        <a href="contact.html" class="btn btn-primary-custom ms-2 text-nowrap">Schedule</a>
+                    </div>
+                    <p class="text-secondary text-xs mt-3 mb-0"><i class="bi bi-shield-check text-primary-accent me-1"></i> 24/7 Emergency Decontamination Hotline Available.</p>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-5 text-secondary border-top border-color">
+                <p>&copy; 2026 Attix. Certified Environmental Decontamination &amp; Restoration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

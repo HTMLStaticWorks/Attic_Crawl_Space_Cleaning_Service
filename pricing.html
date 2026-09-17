@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Packages &amp; Pricing | Attix</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <meta name="description"
+        content="Transparent pricing packages for attic cleanouts, contaminated insulation removal, hospital-grade sanitization, and crawl space vapor barrier encapsulation.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <style>
+        .pricing-plans-row>.col-lg-4 {
+            display: flex;
+        }
+
+        .pricing-plans-row>.col-lg-4>.glass-card {
+            width: 100%;
+        }
+
+        .pricing-feature-list {
+            flex-grow: 1;
+        }
+
+        .pricing-feature-list li {
+            min-height: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.svg" alt="Attix Logo" class="me-2" style="height: 34px; width: 34px;">
+                <span class="fw-bold text-white fs-4">Att<span class="text-gradient">ix</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list text-white fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Before &amp; After</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                            RTL
+                        </button>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary-custom btn-sm d-flex align-items-center" title="Book Inspection">
+                        Book Inspection
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Hero -->
+    <section class="py-5 mt-4">
+        <div class="container pt-4">
+            <div class="row align-items-center g-5 mb-5">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <span class="badge bg-secondary-bg border border-color text-primary-accent mb-3 px-3 py-2 rounded-pill fw-bold text-uppercase tracking-wider">
+                        <i class="bi bi-calculator me-1"></i> Fixed Pricing &amp; $0-Down Financing
+                    </span>
+                    <h1 class="display-3 fw-bold mb-4">
+                        Transparent <br><span class="text-gradient">Restoration Packages</span>
+                    </h1>
+                    <p class="text-secondary lead pe-lg-4 mb-4">
+                        Upfront pricing, certified hospital-grade sanitization protocols, and comprehensive warranty coverage with zero hidden fees.
+                    </p>
+                    
+                    <div class="d-flex align-items-center gap-3 justify-content-center justify-content-lg-start mb-4">
+                        <span class="text-white text-sm">Individual Service</span>
+                        <div class="form-check form-switch p-0 m-0" style="width: 50px; height: 24px;">
+                            <input class="form-check-input ms-0 m-0 w-100 h-100" type="checkbox" id="billingSwitch" style="cursor: pointer;" checked>
+                        </div>
+                        <span class="text-secondary text-sm">Whole-Home Bundle <span class="badge bg-primary-accent text-dark ms-1">Save 15%</span></span>
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#pricing-cards" class="btn btn-primary-custom btn-lg px-4">View All Packages</a>
+                        <a href="contact.html" class="btn btn-outline-custom btn-lg px-4">Get Custom Estimate</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="hero-img-container position-relative ps-lg-3">
+                        <div class="position-absolute rounded-circle bg-primary-accent opacity-10" style="width: 260px; height: 260px; bottom: -20px; right: -20px; filter: blur(50px); z-index: 0;"></div>
+                        
+                        <div class="float-animation position-relative z-index-1">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800" 
+                                alt="Restoration Package Pricing" class="main-hero-img img-fluid" style="height: 440px; width: 100%; object-fit: cover;">
+                        </div>
+
+                        <!-- Unique Animated Floating Badge 1: Warranty Protection -->
+                        <div class="hero-floating-badge badge-pos-top-right float-animation-reverse d-flex align-items-center gap-3">
+                            <div class="rounded-circle p-2 bg-secondary-bg border border-color text-primary-accent d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                <i class="bi bi-patch-check-fill fs-5"></i>
+                            </div>
+                            <div>
+                                <div class="fw-bold text-white text-xs">Warranty Included</div>
+                                <div class="text-primary-accent text-xs fw-bold mb-0">Lifetime Rodent Exclusion</div>
+                            </div>
+                        </div>
+
+                        <!-- Unique Animated Floating Badge 2: Energy Savings -->
+                        <div class="hero-floating-badge badge-pos-bottom-left float-slow d-flex align-items-center gap-3">
+                            <span class="pulse-indicator"></span>
+                            <div>
+                                <div class="fw-bold text-white text-xs text-uppercase tracking-wider">HVAC Efficiency</div>
+                                <div class="text-secondary text-xs mb-0">Save up to 25% on Energy Bills</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center pricing-plans-row">
+                <!-- Plan 1 -->
+                <div class="col-lg-4">
+                    <div class="glass-card p-5 h-100 d-flex flex-column">
+                        <div style="height: 40px;" class="mb-4"></div> <!-- Badge Spacer -->
+                        <h3 class="h5 text-white mb-4">Attic Hygiene Reset</h3>
+                        <div class="display-4 fw-bold mb-4 text-white">$<span class="price-val" data-weekly="899" data-monthly="765">899</span> <span class="fs-6 text-secondary fw-normal price-period">/starting</span></div>
+                        <p class="text-secondary text-sm mb-4">Ideal for minor rodent traces or seasonal hygiene upkeep.</p>
+                        <hr class="border-color mb-5">
+                        <ul class="list-unstyled text-start mb-5 pricing-feature-list">
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Surface Debris &amp; Waste Extraction</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Antimicrobial Enzyme Mist</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Basic Entry Gap Sealing</span>
+                            </li>
+                            <li class="mb-3 text-secondary d-flex align-items-center"><i
+                                    class="bi bi-dash-circle me-2"></i><span>No Insulation Replacement</span></li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="contact.html" class="btn btn-outline-custom w-100">Book Assessment</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="col-lg-4">
+                    <div class="glass-card p-5 h-100 border-primary-accent d-flex flex-column"
+                        style="box-shadow: 0 0 40px rgba(14, 165, 233, 0.15);">
+                        <div class="text-center mb-4" style="height: 40px;">
+                            <div class="badge px-3 py-2 fw-semibold" style="background-color: var(--primary-accent); color: #0b1020; letter-spacing: 0.05em;">MOST POPULAR</div>
+                        </div>
+                        <h3 class="h5 text-white mb-4">Complete Attic Restoration</h3>
+                        <div class="display-4 fw-bold mb-4 text-white">$<span class="price-val" data-weekly="1850" data-monthly="1570">1,850</span> <span class="fs-6 text-secondary fw-normal price-period">/starting</span>
+                        </div>
+                        <p class="text-secondary text-sm mb-4">Full cleanout, hospital disinfection &amp; re-insulation.</p>
+                        <hr class="border-color mb-5">
+                        <ul class="list-unstyled text-start mb-5 pricing-feature-list">
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>100% HEPA Vacuum Insulation Removal</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Hospital-Grade Virucidal Fogging</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Full Metal Mesh Exclusion Seal</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Blown-In R-38 Virgin Insulation</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Lifetime Rodent Warranty</span></li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="contact.html" class="btn btn-primary-custom w-100">Schedule Restoration</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="col-lg-4">
+                    <div class="glass-card p-5 h-100 d-flex flex-column">
+                        <div style="height: 40px;" class="mb-4"></div> <!-- Badge Spacer -->
+                        <h3 class="h5 text-white mb-4">Total Envelope Defense</h3>
+                        <div class="display-4 fw-bold mb-4 text-white">$<span class="price-val" data-weekly="2950" data-monthly="2500">2,950</span> <span class="fs-6 text-secondary fw-normal price-period">/starting</span></div>
+                        <p class="text-secondary text-sm mb-4">Complete attic restoration + crawl space encapsulation.</p>
+                        <hr class="border-color mb-5">
+                        <ul class="list-unstyled text-start mb-5 pricing-feature-list">
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Full Attic &amp; Crawl Space Decontamination</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>20-Mil Sealed Vapor Barrier Membrane</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>HVAC Air Duct Sanitization &amp; Sealing</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center"><i
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Annual Clearance Inspection Included</span></li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="contact.html" class="btn btn-outline-custom w-100">Get Custom Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Support Section -->
+    <section class="py-5 bg-secondary-bg">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 mb-4">Dedicated <span class="text-gradient">Decontamination Standards</span></h2>
+                    <p class="text-secondary lead">Every project is managed by certified environmental remediation specialists using hospital-grade equipment, negative-pressure containment, and photographic proof of clearance.</p>
+                    <ul class="list-unstyled mt-5">
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-check2-circle text-primary-accent me-3 fs-5"></i>
+                            <span>Comprehensive before-and-after digital photo dossier</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-check2-circle text-primary-accent me-3 fs-5"></i>
+                            <span>Assistance with insurance documentation &amp; claims</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 text-center">
+                                <i class="bi bi-shield-shaded text-primary-accent fs-1 mb-3 d-block"></i>
+                                <h4 class="h5">Lab-Safe Chemicals</h4>
+                                <p class="text-secondary text-sm mb-0">EPA-registered, non-toxic botanical virucides safe for children &amp; pets.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 text-center">
+                                <i class="bi bi-patch-check-fill text-primary-accent fs-1 mb-3 d-block"></i>
+                                <h4 class="h5">Exclusion Warranty</h4>
+                                <p class="text-secondary text-sm mb-0">If rodents re-enter sealed zones, we re-treat and re-seal free of charge.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 mb-3">Frequently Asked <span class="text-gradient">Questions</span></h2>
+                <p class="text-secondary max-w-600 mx-auto">Learn more about our attic decontamination and crawl space encapsulation processes.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush" id="faqAccordion">
+                        <div class="accordion-item glass-card mb-3 border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent text-white shadow-none"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Why is removing old contaminated insulation necessary?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Over time, insulation absorbs moisture, mold spores, and rodent urine pheromones. Rodent waste carries pathogens like Hantavirus and Leptospirosis. Vacuuming out old material under HEPA negative air is the only way to permanently eradicate allergens and odor sources.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item glass-card mb-3 border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent text-white shadow-none"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How does crawl space air reach our bedrooms and living rooms?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Through the "Stack Effect" or chimney effect: warm air rises and escapes through ceiling and attic leaks. This natural draft creates low pressure downstairs, sucking up to 40% of the air you breathe directly through subfloor cracks from the damp crawl space.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item glass-card mb-3 border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent text-white shadow-none"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Are your sanitizing disinfectants safe for children and pets?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Yes. We utilize hospital-grade, EPA-registered botanical virucides and natural enzyme formulations. They break down organic bio-contaminants at the cellular level without releasing harsh VOCs or lingering toxic fumes into living quarters.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item glass-card mb-3 border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent text-white shadow-none"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Can we stay in the home while the cleanout is happening?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Yes! We construct zip-sealed containment barriers over the attic hatch or crawl access and exhaust all dust through negative-air filtration hoses directly to outside containment trucks, ensuring zero contaminants enter your living areas.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5 border-top border-color">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <img src="assets/images/logo.svg" alt="Attix Logo" height="34" class="me-2">
+                        <span class="fw-bold text-white fs-4">Att<span class="text-gradient">ix</span></span>
+                    </a>
+                    <p class="text-secondary">Certified attic and crawl space decontamination, contaminated insulation extraction, hospital-grade sanitization, and guaranteed rodent-proofing for healthier indoor air.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4 social-links">
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Specialized Services</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Insulation Removal</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Sanitization &amp; Fogging</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Rodent Proofing</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Vapor Barrier Install</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Main Navigation</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Services</a></li>
+                        <li class="mb-2"><a href="portfolio.html" class="text-decoration-none text-secondary">Before &amp; After</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-decoration-none text-secondary">Pricing</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none text-secondary">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Book Free Inspection</h5>
+                    <div class="glass-card p-2 d-flex">
+                        <input type="text" class="form-control bg-transparent border-0 text-white shadow-none"
+                            placeholder="Phone or Email">
+                        <a href="contact.html" class="btn btn-primary-custom ms-2 text-nowrap">Schedule</a>
+                    </div>
+                    <p class="text-secondary text-xs mt-3 mb-0"><i class="bi bi-shield-check text-primary-accent me-1"></i> 24/7 Emergency Decontamination Hotline Available.</p>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-5 text-secondary border-top border-color">
+                <p>&copy; 2026 Attix. Certified Environmental Decontamination &amp; Restoration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

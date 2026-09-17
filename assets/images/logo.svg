@@ -1,0 +1,28 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Outer Shield / Clean Protection -->
+    <path d="M25 3L8 9V22C8 33.5 15.2 43.6 25 47C34.8 43.6 42 33.5 42 22V9L25 3Z" fill="url(#attic-shield-grad)" opacity="0.12"/>
+    <path d="M25 3L8 9V22C8 33.5 15.2 43.6 25 47C34.8 43.6 42 33.5 42 22V9L25 3Z" stroke="url(#attic-shield-grad)" stroke-width="2.5" stroke-linejoin="round"/>
+    
+    <!-- House Roofline / Attic Space -->
+    <path d="M16 23L25 14L34 23" stroke="#0EA5E9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Attic Vent / Sparkle Triangle -->
+    <polygon points="25,17.5 22.5,21.5 27.5,21.5" fill="#38BDF8"/>
+    
+    <!-- House Main Walls -->
+    <path d="M18 23V31H32V23" stroke="#0284C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Subfloor / Crawl Space Foundation Grid -->
+    <path d="M15 32H35" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+    <path d="M17 35H33" stroke="#0EA5E9" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 2"/>
+    <path d="M20 38H30" stroke="#0284C7" stroke-width="1.8" stroke-linecap="round"/>
+    
+    <!-- Sanitization Sparkle -->
+    <path d="M35 12L36 14L38 15L36 16L35 18L34 16L32 15L34 14L35 12Z" fill="#38BDF8"/>
+    
+    <defs>
+        <linearGradient id="attic-shield-grad" x1="25" y1="3" x2="25" y2="47" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#38BDF8"/>
+            <stop offset="1" stop-color="#0284C7"/>
+        </linearGradient>
+    </defs>
+</svg>

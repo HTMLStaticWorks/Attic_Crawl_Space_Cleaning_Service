@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book An Inspection | Attix</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <meta name="description"
+        content="Book a comprehensive on-site attic or crawl space inspection with Attix. We detect mold, rodent entry points, and contaminated insulation with digital photo reporting.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.svg" alt="Attix Logo" class="me-2" style="height: 34px; width: 34px;">
+                <span class="fw-bold text-white fs-4">Att<span class="text-gradient">ix</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list text-white fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Before &amp; After</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                            RTL
+                        </button>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary-custom btn-sm d-flex align-items-center" title="Book Inspection">
+                        Book Inspection
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="py-5 mt-4">
+        <div class="container pt-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <span class="badge bg-secondary-bg border border-color text-primary-accent mb-3 px-3 py-2 rounded-pill fw-bold text-uppercase tracking-wider">
+                        <i class="bi bi-geo-alt-fill me-1"></i> Rapid On-Site Dispatch
+                    </span>
+                    <h1 class="display-3 fw-bold mb-4">
+                        Schedule Your <br><span class="text-gradient">Free On-Site Inspection</span>
+                    </h1>
+                    <p class="text-secondary lead pe-lg-4 mb-4">
+                        Notice foul odors, scratching sounds in the ceiling, or damp floors? Our certified inspectors provide on-site thermal imaging and clear photo documentation.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-4">
+                        <span class="badge bg-primary-bg border border-color text-secondary px-3 py-2 rounded-pill">
+                            <i class="bi bi-clock-history text-primary-accent me-1"></i> 2-Hour Arrival Window
+                        </span>
+                        <span class="badge bg-primary-bg border border-color text-secondary px-3 py-2 rounded-pill">
+                            <i class="bi bi-camera text-primary-accent me-1"></i> Free Thermal Camera Audit
+                        </span>
+                        <span class="badge bg-primary-bg border border-color text-secondary px-3 py-2 rounded-pill">
+                            <i class="bi bi-file-earmark-text text-primary-accent me-1"></i> Zero-Obligation Written Quote
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#inspection-form" class="btn btn-primary-custom btn-lg px-4">Jump to Booking Form</a>
+                        <a href="tel:8005552884" class="btn btn-outline-custom btn-lg px-4"><i class="bi bi-telephone me-1"></i> (800) 555-ATTIC</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="hero-img-container position-relative ps-lg-3">
+                        <div class="position-absolute rounded-circle bg-primary-accent opacity-10" style="width: 260px; height: 260px; bottom: -20px; right: -20px; filter: blur(50px); z-index: 0;"></div>
+                        
+                        <div class="float-animation position-relative z-index-1">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=800" 
+                                alt="Inspection Specialist" class="main-hero-img img-fluid" style="height: 440px; width: 100%; object-fit: cover;">
+                        </div>
+
+                        <!-- Unique Animated Floating Badge 1: Mobile Dispatch -->
+                        <div class="hero-floating-badge badge-pos-top-right float-animation-reverse d-flex align-items-center gap-3">
+                            <span class="pulse-indicator"></span>
+                            <div>
+                                <div class="fw-bold text-white text-xs text-uppercase tracking-wider">Mobile Dispatch</div>
+                                <div class="text-primary-accent text-xs fw-bold mb-0">3 Decontamination Units Active</div>
+                            </div>
+                        </div>
+
+                        <!-- Unique Animated Floating Badge 2: Certified Specialists -->
+                        <div class="hero-floating-badge badge-pos-bottom-left float-slow d-flex align-items-center gap-3">
+                            <div class="rounded-circle p-2 bg-secondary-bg border border-color text-primary-accent d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                <i class="bi bi-shield-check fs-5"></i>
+                            </div>
+                            <div>
+                                <div class="fw-bold text-white text-xs">Certified Technicians</div>
+                                <div class="text-secondary text-xs mb-0">Licensed, Bonded &amp; Insured</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5 text-center text-lg-start">
+                    <h2 class="h2 mb-4">Inspection Hotline</h2>
+
+                    <div class="glass-card contact-info-card p-4 mb-4 d-flex flex-column flex-lg-row align-items-center text-center text-lg-start">
+                        <div class="bg-primary-accent rounded-circle p-3 me-lg-4 mb-3 mb-lg-0 text-dark"><i
+                                class="bi bi-telephone-fill fs-4"></i></div>
+                        <div>
+                            <h4 class="h6 text-secondary mb-1">24/7 Dispatch Hotline</h4>
+                            <p class="mb-0 fw-bold fs-5">(800) 555-ATTIC</p>
+                            <p class="text-secondary text-xs mb-0">Direct Technician Emergency Line</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card contact-info-card p-4 mb-4 d-flex flex-column flex-lg-row align-items-center text-center text-lg-start">
+                        <div class="bg-primary-accent rounded-circle p-3 me-lg-4 mb-3 mb-lg-0 text-dark"><i
+                                class="bi bi-geo-alt-fill fs-4"></i></div>
+                        <div>
+                            <h4 class="h6 text-secondary mb-1">Environmental Dispatch Hub</h4>
+                            <p class="mb-0 fw-bold">Regional Service Center, Metro District</p>
+                            <p class="text-secondary text-xs mb-0">Mobile remediation units stationed across the area</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card contact-info-card p-4 mb-4 d-flex flex-column flex-lg-row align-items-center text-center text-lg-start">
+                        <div class="bg-primary-accent rounded-circle p-3 me-lg-4 mb-3 mb-lg-0 text-dark"><i
+                                class="bi bi-envelope-fill fs-4"></i></div>
+                        <div>
+                            <h4 class="h6 text-secondary mb-1">Email Booking &amp; Reports</h4>
+                            <p class="mb-0 fw-bold">inspect@atticcleaningservice.com</p>
+                            <p class="text-secondary text-xs mb-0">Same-day quote responses guaranteed</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <h5 class="mb-4">Certified Compliance</h5>
+                        <div class="d-flex justify-content-center justify-content-lg-start gap-3 fs-3 social-links">
+                            <a href="#" class="text-secondary" title="Certified Remediation"><i class="bi bi-shield-check"></i></a>
+                            <a href="#" class="text-secondary" title="EPA Compliant"><i class="bi bi-patch-check"></i></a>
+                            <a href="#" class="text-secondary" title="OSHA Safety Standards"><i class="bi bi-award"></i></a>
+                            <a href="#" class="text-secondary" title="Verified Reviews"><i class="bi bi-star-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="glass-card p-4 p-md-5">
+                        <h3 class="h4 mb-2 text-center">Inspection Booking Form</h3>
+                        <p class="text-secondary text-sm text-center mb-4">Complete this quick form to reserve your free diagnostic hazard assessment.</p>
+                        <form id="inspectionBookingForm">
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Full Name *</label>
+                                    <input type="text" required
+                                        class="form-control bg-transparent border-color text-white shadow-none p-3"
+                                        placeholder="Jane Smith">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Phone Number *</label>
+                                    <input type="tel" required
+                                        class="form-control bg-transparent border-color text-white shadow-none p-3"
+                                        placeholder="(555) 123-4567">
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Email Address *</label>
+                                    <input type="email" required
+                                        class="form-control bg-transparent border-color text-white shadow-none p-3"
+                                        placeholder="jane@example.com">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Property Street Address *</label>
+                                    <input type="text" required
+                                        class="form-control bg-transparent border-color text-white shadow-none p-3"
+                                        placeholder="124 Pine St, City, Zip">
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Property Type</label>
+                                    <select class="form-select bg-transparent border-color text-white shadow-none p-3">
+                                        <option class="text-dark" value="single-family">Single Family Home</option>
+                                        <option class="text-dark" value="multi-story">Multi-Story Residential</option>
+                                        <option class="text-dark" value="townhouse">Townhouse / Condo</option>
+                                        <option class="text-dark" value="commercial">Commercial Building</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Service Needed</label>
+                                    <select class="form-select bg-transparent border-color text-white shadow-none p-3">
+                                        <option class="text-dark" value="attic-cleanout">Attic Cleanout &amp; Sanitization</option>
+                                        <option class="text-dark" value="insulation-removal">Insulation Removal &amp; Replacement</option>
+                                        <option class="text-dark" value="rodent-proofing">Rodent-Proofing &amp; Exclusion</option>
+                                        <option class="text-dark" value="crawl-space">Crawl Space Vapor Barrier Encapsulation</option>
+                                        <option class="text-dark" value="full-inspection">Complete Home Hazard Inspection</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Primary Hazard / Concern</label>
+                                    <select class="form-select bg-transparent border-color text-white shadow-none p-3">
+                                        <option class="text-dark" value="rodent-noises">Scratching / Rodent Activity</option>
+                                        <option class="text-dark" value="mold-odor">Foul Odor / Musty Smell / Mold</option>
+                                        <option class="text-dark" value="old-insulation">Deteriorated / Falling Insulation</option>
+                                        <option class="text-dark" value="standing-water">Standing Water in Crawl Space</option>
+                                        <option class="text-dark" value="energy-loss">High Utility Bills &amp; Drafty Rooms</option>
+                                        <option class="text-dark" value="real-estate">Real Estate Closing Contingency</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Preferred Time Window</label>
+                                    <select class="form-select bg-transparent border-color text-white shadow-none p-3">
+                                        <option class="text-dark" value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                                        <option class="text-dark" value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                                        <option class="text-dark" value="evening">Evening (4:00 PM - 7:00 PM)</option>
+                                        <option class="text-dark" value="saturday">Weekend Priority Slot</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label text-secondary text-sm">Additional Property Details / Access Notes</label>
+                                <textarea class="form-control bg-transparent border-color text-white shadow-none p-3"
+                                    rows="4" placeholder="Mention attic hatch location, approximate square footage, or any specific concerns..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100 py-3 fw-bold">Confirm Inspection Booking</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="glass-card p-2 overflow-hidden shadow-lg border-0">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d-122.39998468468245!3d37.77492927975922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807bed8f559a%3A0x4bb570dcf454c698!2sDesign%20District%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1689123456789!5m2!1sen!2sus"
+                    width="100%" height="450"
+                    style="border:0; border-radius: 12px; filter: grayscale(1) invert(1) contrast(1.2) opacity(0.8);"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5 border-top border-color">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <img src="assets/images/logo.svg" alt="Attix Logo" height="34" class="me-2">
+                        <span class="fw-bold text-white fs-4">Att<span class="text-gradient">ix</span></span>
+                    </a>
+                    <p class="text-secondary">Certified attic and crawl space decontamination, contaminated insulation extraction, hospital-grade sanitization, and guaranteed rodent-proofing for healthier indoor air.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4 social-links">
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Specialized Services</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Insulation Removal</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Sanitization &amp; Fogging</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Rodent Proofing</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Vapor Barrier Install</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Main Navigation</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Services</a></li>
+                        <li class="mb-2"><a href="portfolio.html" class="text-decoration-none text-secondary">Before &amp; After</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-decoration-none text-secondary">Pricing</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none text-secondary">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Book Free Inspection</h5>
+                    <div class="glass-card p-2 d-flex">
+                        <input type="text" class="form-control bg-transparent border-0 text-white shadow-none"
+                            placeholder="Phone or Email">
+                        <a href="contact.html" class="btn btn-primary-custom ms-2 text-nowrap">Schedule</a>
+                    </div>
+                    <p class="text-secondary text-xs mt-3 mb-0"><i class="bi bi-shield-check text-primary-accent me-1"></i> 24/7 Emergency Decontamination Hotline Available.</p>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-5 text-secondary border-top border-color">
+                <p>&copy; 2026 Attix. Certified Environmental Decontamination &amp; Restoration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
