@@ -95,7 +95,7 @@ h4, h5, h6, .h4, .h5, .h6 {
 .btn-primary-custom {
     background: var(--gradient-primary);
     border: none;
-    color: white;
+    color: #ffffff !important;
     padding: 12px 28px;
     border-radius: 12px;
     font-weight: 600;
@@ -106,7 +106,7 @@ h4, h5, h6, .h4, .h5, .h6 {
 .btn-primary-custom:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
-    color: white;
+    color: #ffffff !important;
 }
 
 .btn-outline-custom {
@@ -331,9 +331,23 @@ h4, h5, h6, .h4, .h5, .h6 {
 
 /* Hero Section */
 .hero-section {
-    padding: 140px 0 100px;
+    padding: 36px 0;
     position: relative;
     overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    .hero-section {
+        min-height: calc(100vh - 71px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0 25px;
+    }
+
+    .hero-section > .container {
+        width: 100%;
+    }
 }
 
 [dir="rtl"] .hero-section {
@@ -498,17 +512,19 @@ body.light-theme .hero-floating-badge {
     border: 1px solid var(--border-color);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
     width: 100%;
+    height: 390px;
+    max-height: clamp(280px, 42vh, 410px);
     object-fit: cover;
 }
 
 .badge-pos-top-right {
-    top: -20px;
-    right: -20px;
+    top: -12px;
+    right: -12px;
 }
 
 .badge-pos-bottom-left {
-    bottom: -20px;
-    left: -20px;
+    bottom: 14px;
+    left: -15px;
 }
 
 .badge-pos-top-left {
@@ -877,9 +893,9 @@ u {
 }
 
 .hero-title {
-    font-size: clamp(2rem, 5vw, 3rem) !important;
+    font-size: clamp(1.9rem, 3.2vw, 2.85rem) !important;
     line-height: 1.15 !important;
-    font-weight: 580 !important;
+    font-weight: 650 !important;
 }
 
 /* Dashboard overview metric cards text sizing */
@@ -1089,24 +1105,40 @@ u {
 }
 
 /* Pricing FAQ RTL Alignment and Dark Theme Visibility */
-#pricingFaqAccordion .accordion-button {
+#faqAccordion .accordion-button,
+#pricingFaqAccordion .accordion-button,
+.accordion .accordion-button {
     color: var(--text-primary) !important;
 }
 
-#pricingFaqAccordion .accordion-body {
+#faqAccordion .accordion-body,
+#pricingFaqAccordion .accordion-body,
+.accordion .accordion-body {
     color: var(--text-secondary) !important;
 }
 
-[dir="rtl"] #pricingFaqAccordion {
+[dir="rtl"] #faqAccordion,
+[dir="rtl"] #pricingFaqAccordion,
+[dir="rtl"] .accordion {
     direction: rtl;
 }
 
-[dir="rtl"] #pricingFaqAccordion .accordion-button {
+[dir="rtl"] #faqAccordion .accordion-button,
+[dir="rtl"] #pricingFaqAccordion .accordion-button,
+[dir="rtl"] .accordion .accordion-button {
     text-align: right;
 }
 
-body:not(.light-theme) #pricingFaqAccordion .accordion-button::after {
-    filter: brightness(0) invert(1);
+body:not(.light-theme) #faqAccordion .accordion-button::after,
+body:not(.light-theme) #pricingFaqAccordion .accordion-button::after,
+body:not(.light-theme) .accordion-button::after {
+    filter: brightness(0) invert(1) !important;
+}
+
+body.light-theme #faqAccordion .accordion-button::after,
+body.light-theme #pricingFaqAccordion .accordion-button::after,
+body.light-theme .accordion-button::after {
+    filter: none !important;
 }
 
 /* Produce Page: Our Growing Process RTL Alignment */
