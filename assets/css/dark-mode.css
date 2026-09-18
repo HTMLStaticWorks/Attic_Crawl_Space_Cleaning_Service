@@ -63,7 +63,7 @@ body.light-theme .hero-ai-enhanced-badge {
     color: #ffffff !important;
 }
 
-/* Cards & Dashboard Elements */
+/* Cards */
 body.light-theme .glass-card {
     background: #ffffff;
     border-color: rgba(0, 0, 0, 0.08);
@@ -74,42 +74,10 @@ body.light-theme .glass-card:hover {
     border-color: var(--secondary-accent);
 }
 
-body.light-theme .dashboard-card {
-    background: #ffffff;
-    border-color: rgba(0, 0, 0, 0.06);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-}
-
-body.light-theme .sidebar {
-    background: #ffffff;
-    border-right: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-body.light-theme .sidebar-link {
-    color: #475569;
-}
-
-body.light-theme .sidebar-link:hover,
-body.light-theme .sidebar-link.active {
-    background: rgba(14, 165, 233, 0.08);
-    color: var(--secondary-accent);
-}
-
 /* Tables */
 body.light-theme .table-dark {
     --bs-table-bg: transparent;
     color: #0F172A;
-}
-
-body.light-theme .table-glass tr td,
-body.light-theme .table-glass tr th {
-    background: #ffffff;
-    color: #0F172A;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-body.light-theme .table-glass th.text-secondary {
-    color: #64748b !important;
 }
 
 /* Form Controls */

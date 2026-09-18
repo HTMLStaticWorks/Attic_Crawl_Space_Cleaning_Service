@@ -1,91 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Sidebar Toggle
-    const sidebar = document.getElementById('sidebar');
-    const sidebarToggle = document.getElementById('sidebar-toggle');
-    if (sidebarToggle) {
-        sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-    }
-
-    // Chart.js Initialization
-    let engagementChartInstance = null;
-    const initialIsLightTheme = localStorage.getItem('theme') === 'light';
-    const initialEngagementTickColor = initialIsLightTheme ? '#334155' : '#b8c0d4';
-    const initialEngagementGridColor = initialIsLightTheme ? 'rgba(15, 23, 42, 0.12)' : 'rgba(255, 255, 255, 0.05)';
-
-    const engagementCtx = document.getElementById('engagementChart');
-    if (engagementCtx) {
-        engagementChartInstance = new Chart(engagementCtx, {
-            type: 'line',
-            data: {
-                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-                datasets: [{
-                    label: 'Homes Decontaminated',
-                    data: [12, 19, 15, 25, 22, 30, 28],
-                    borderColor: '#0EA5E9',
-                    backgroundColor: 'rgba(14, 165, 233, 0.1)',
-                    fill: true,
-                    tension: 0.4,
-                    borderWidth: 3,
-                    pointBackgroundColor: '#0EA5E9',
-                    pointBorderColor: '#0A111E',
-                    pointBorderWidth: 2,
-                    pointRadius: 5,
-                    pointHoverRadius: 7
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    y: {
-                        grid: { color: initialEngagementGridColor },
-                        ticks: { color: initialEngagementTickColor }
-                    },
-                    x: {
-                        grid: { display: false },
-                        ticks: { color: initialEngagementTickColor }
-                    }
-                }
-            }
-        });
-    }
-
-    const deviceCtx = document.getElementById('deviceChart');
-    if (deviceCtx) {
-        new Chart(deviceCtx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Attic Cleanout', 'Restoration & Insulation', 'Envelope Defense'],
-                datasets: [{
-                    data: [55, 30, 15],
-                    backgroundColor: ['#0EA5E9', '#0284C7', '#38BDF8'],
-                    borderWidth: 0,
-                    hoverOffset: 10
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                cutout: '70%',
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            color: '#b8c0d4',
-                            padding: 20,
-                            font: { size: 12 }
-                        }
-                    }
-                }
-            }
-        });
-    }
-
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const savedTheme = localStorage.getItem('theme');
@@ -106,15 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 icon.classList.replace('bi-moon-stars', 'bi-sun');
             } else {
                 icon.classList.replace('bi-sun', 'bi-moon-stars');
-            }
-
-            if (engagementChartInstance) {
-                const tickColor = isLight ? '#334155' : '#b8c0d4';
-                const gridColor = isLight ? 'rgba(15, 23, 42, 0.12)' : 'rgba(255, 255, 255, 0.05)';
-                engagementChartInstance.options.scales.y.ticks.color = tickColor;
-                engagementChartInstance.options.scales.x.ticks.color = tickColor;
-                engagementChartInstance.options.scales.y.grid.color = gridColor;
-                engagementChartInstance.update();
             }
         });
     }
@@ -235,37 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Section Switching Logic
-    window.showSection = function (sectionId) {
-        // Hide all sections
-        document.querySelectorAll('.content-section').forEach(section => {
-            section.classList.add('d-none');
-        });
 
-        // Show target section
-        const targetSection = document.getElementById(sectionId + '-section');
-        if (targetSection) {
-            targetSection.classList.remove('d-none');
-        }
-
-        // Update sidebar active state
-        document.querySelectorAll('.sidebar-link').forEach(link => {
-            link.classList.remove('active');
-        });
-
-        // Handle case where link might not have been clicked directly (if called via code)
-        const activeLink = document.querySelector(`.sidebar-link[onclick="showSection('${sectionId}')"]`);
-        if (activeLink) {
-            activeLink.classList.add('active');
-        }
-
-
-
-        // Close sidebar on mobile after selection
-        if (window.innerWidth < 992 && sidebar.classList.contains('active')) {
-            sidebar.classList.remove('active');
-        }
-    };
 
     // Navbar Menu Scroll Lock and Auto-close
     const navbarCollapse = document.getElementById('navbarNav');

@@ -550,76 +550,7 @@ body.light-theme .hero-floating-badge {
 }
 
 
-/* Dashboard UI */
-.dashboard-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 24px;
-    height: 100%;
-    transition: var(--transition);
-}
-
-.stat-icon {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.sidebar-nav {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar-link {
-    display: flex;
-    align-items: center;
-    padding: 12px 20px;
-    color: var(--text-secondary);
-    text-decoration: none;
-    border-radius: 10px;
-    margin-bottom: 8px;
-    transition: var(--transition);
-}
-
-.sidebar-link i {
-    width: 24px;
-    margin-right: 12px;
-    font-size: 1.2rem;
-}
-
-.sidebar-link:hover,
-.sidebar-link.active {
-    background: rgba(34, 197, 94, 0.1);
-    color: var(--primary-accent);
-}
-
-.table-glass {
-    border-collapse: separate;
-    border-spacing: 0 10px;
-}
-
-.table-glass tr td,
-.table-glass tr th {
-    background: var(--card-bg);
-    border: none;
-    padding: 15px 20px;
-    vertical-align: middle;
-}
-
-.table-glass tr td:first-child {
-    border-radius: 12px 0 0 12px;
-}
-
-.table-glass tr td:last-child {
-    border-radius: 0 12px 12px 0;
-}
-
+/* Status Badges */
 .status-badge {
     padding: 5px 12px;
     border-radius: 20px;
@@ -635,78 +566,6 @@ body.light-theme .hero-floating-badge {
 .status-paused {
     background: rgba(245, 158, 11, 0.1);
     color: var(--warning);
-}
-
-/* Sidebar & Main Content Layout */
-.sidebar {
-    width: 280px;
-    background: var(--secondary-bg);
-    border-right: 1px solid var(--border-color);
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 30px;
-    z-index: 1050;
-    transition: var(--transition);
-}
-
-.main-content {
-    margin-left: 280px;
-    padding: 40px;
-    min-height: 100vh;
-}
-
-/* Responsive */
-@media (max-width: 991px) {
-    .sidebar {
-        transform: translateX(-100%);
-    }
-
-    .sidebar.active {
-        transform: translateX(0);
-    }
-
-    .main-content {
-        margin-left: 0;
-    }
-}
-
-/* RTL Layout Overrides */
-[dir="rtl"] .sidebar {
-    left: auto !important;
-    right: 0 !important;
-    border-right: none !important;
-    border-left: 1px solid var(--border-color) !important;
-}
-
-[dir="rtl"] .main-content {
-    margin-left: 0 !important;
-    margin-right: 280px !important;
-}
-
-[dir="rtl"] .sidebar-link i {
-    margin-right: 0 !important;
-    margin-left: 12px !important;
-}
-
-[dir="rtl"] #delivery-section .bg-primary-accent,
-[dir="rtl"] #delivery-section .bg-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-[dir="rtl"] #delivery-section .bg-primary-accent i,
-[dir="rtl"] #delivery-section .bg-secondary i {
-    line-height: 1;
-    display: block;
-}
-
-[dir="rtl"] #orders-section .bi-credit-card-2-front {
-    margin-right: 0 !important;
-    margin-left: 1rem !important;
 }
 
 @media (min-width: 992px) {
@@ -732,19 +591,7 @@ body.light-theme .hero-floating-badge {
     display: block;
 }
 
-@media (max-width: 991px) {
-    [dir="rtl"] .sidebar {
-        transform: translateX(100%) !important;
-    }
 
-    [dir="rtl"] .sidebar.active {
-        transform: translateX(0) !important;
-    }
-
-    [dir="rtl"] .main-content {
-        margin-right: 0 !important;
-    }
-}
 
 
 .max-w-600 {
@@ -868,12 +715,6 @@ u {
     text-decoration-color: var(--primary-accent);
 }
 
-/* Dashboard Numbers custom fonts and size rules */
-.dashboard-number, .stat-number, .number-font {
-    font-family: 'Manrope', sans-serif !important;
-    font-weight: 600 !important;
-}
-
 /* Unique layout helper classes */
 .section-title {
     font-size: clamp(1.75rem, 4vw, 2.5rem) !important;
@@ -896,167 +737,6 @@ u {
     font-size: clamp(1.9rem, 3.2vw, 2.85rem) !important;
     line-height: 1.15 !important;
     font-weight: 650 !important;
-}
-
-/* Dashboard overview metric cards text sizing */
-.overview-metric-card h3 {
-    font-size: clamp(1.3rem, 1.8vw, 1.65rem) !important;
-}
-
-@media (width: 1024px) {
-    .sidebar {
-        transform: translateX(-100%) !important;
-    }
-
-    .sidebar.active {
-        transform: translateX(0) !important;
-    }
-
-    #sidebar-close {
-        display: block !important;
-    }
-
-    .main-content {
-        margin-left: 0 !important;
-        padding: 24px !important;
-    }
-
-    .main-content header {
-        flex-wrap: nowrap;
-        align-items: center !important;
-        gap: 12px !important;
-        margin-bottom: 2rem !important;
-    }
-
-    .main-content header > .d-flex.align-items-center {
-        flex: 1 1 auto;
-        min-width: 0;
-    }
-
-    .main-content header > .d-flex.align-items-center.gap-3 {
-        width: auto;
-        justify-content: flex-end;
-        gap: 8px !important;
-        flex-shrink: 0;
-    }
-
-    .main-content header #sidebar-toggle {
-        display: inline-flex !important;
-        align-items: center;
-        justify-content: center;
-        width: 40px !important;
-        min-width: 40px !important;
-        height: 40px !important;
-        min-height: 40px !important;
-        padding: 0 !important;
-    }
-
-    .main-content header #sidebar-toggle i {
-        font-size: 1.9rem !important;
-    }
-
-    .main-content header h1 {
-        font-size: 1.75rem !important;
-    }
-
-    .main-content header .nav-toggle-btn {
-        width: 40px !important;
-        min-width: 40px !important;
-        height: 40px !important;
-        min-height: 40px !important;
-        padding: 0 !important;
-    }
-
-    .main-content header img.rounded-circle {
-        width: 36px !important;
-        height: 36px !important;
-    }
-}
-
-/* Mobile responsive overrides for Dashboard Header & Section Alignments */
-@media (max-width: 991px) {
-    .main-content {
-        padding: 24px !important; /* Reduce padding from 40px to 24px on tablet/mobile for alignment */
-    }
-    
-    .main-content header h1 {
-        font-size: 1.5rem !important; /* Reduce dashboard header title size on tablet/mobile */
-    }
-}
-
-@media (max-width: 767px) {
-    .overview-metric-card h3 {
-        font-size: 1.65rem !important; /* Scale down overview metric numbers to avoid wrapping */
-    }
-}
-
-@media (max-width: 575px) {
-    .main-content {
-        padding: 16px !important; /* Further reduce padding on small mobile screens */
-    }
-    
-    .main-content header {
-        margin-bottom: 2rem !important;
-    }
-    
-    .main-content header h1 {
-        font-size: 1rem !important; /* Significantly reduce dashboard header title size on mobile to fit one line */
-    }
-    
-    .main-content header p.text-sm {
-        font-size: 0.7rem !important; /* Scale down header subtitle text */
-    }
-
-    .main-content header .nav-toggle-btn {
-        width: 32px !important;
-        min-width: 32px !important;
-        height: 32px !important;
-        min-height: 32px !important;
-        padding: 0 !important;
-        font-size: 0.75rem !important;
-        border-radius: 6px !important;
-    }
-
-    .main-content header #sidebar-toggle i {
-        font-size: 1.5rem !important; /* Reduce burger menu icon size on mobile */
-    }
-
-    .main-content header img.rounded-circle {
-        width: 32px !important;
-        height: 32px !important; /* Reduce avatar image size on mobile */
-    }
-    
-    /* Ensure header controls are clean on mobile */
-    .main-content header .d-flex.align-items-center.gap-3 {
-        gap: 8px !important;
-    }
-    
-    /* Stats metric card titles and texts scaling */
-    .overview-metric-card h3 {
-        font-size: 1.35rem !important;
-    }
-    
-    .overview-metric-card .overview-metric-label {
-        font-size: 0.8rem !important;
-    }
-    
-    .overview-metric-card .overview-metric-change {
-        font-size: 0.75rem !important;
-    }
-    
-    /* Stack chart headers to avoid overlap */
-    .dashboard-card .d-flex.justify-content-between.align-items-center.mb-4 {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 12px !important;
-    }
-    
-    /* Stack greenhouse logs item headers on mobile */
-    .bg-secondary-bg .d-flex.justify-content-between.mb-1 {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 6px !important;
-    }
 }
 
 .portfolio-card-equal {
