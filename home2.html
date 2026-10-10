@@ -16,8 +16,206 @@
     <style>
         .hero-section-alt {
             position: relative;
-            padding: 120px 0 80px;
+            padding: 80px 0 60px;
             overflow: hidden;
+        }
+
+        @media (min-width: 992px) {
+            .hero-section-alt {
+                min-height: calc(100vh - 71px);
+                display: flex;
+                align-items: center;
+                padding: 40px 0;
+            }
+        }
+
+        .live-pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--success);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+
+        .hero-service-chips .hero-chip {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .hero-service-chips .hero-chip:hover,
+        .hero-service-chips .hero-chip.active {
+            background: var(--gradient-primary);
+            color: #ffffff !important;
+            border-color: transparent;
+            box-shadow: 0 4px 15px var(--glow-color);
+            transform: translateY(-2px);
+        }
+
+        .hero-hud-panel {
+            border-radius: 24px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .hud-visual-card {
+            border: 1px solid var(--border-color);
+            position: relative;
+            background: #0b1329;
+        }
+
+        .hud-main-image {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hud-visual-card:hover .hud-main-image {
+            transform: scale(1.04);
+        }
+
+        .hud-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(10, 17, 30, 0.1) 0%, rgba(10, 17, 30, 0.75) 100%);
+            pointer-events: none;
+        }
+
+        .hud-in-photo-pill {
+            position: absolute;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            font-size: 0.75rem;
+            padding: 6px 12px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 2;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .hud-in-photo-pill.pos-top-left {
+            top: 14px;
+            left: 14px;
+        }
+
+        .hud-in-photo-pill.pos-bottom-right {
+            bottom: 14px;
+            right: 14px;
+        }
+
+        .hud-metric-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .hud-metric-card:hover {
+            border-color: var(--primary-accent);
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .hud-floating-warranty {
+            position: absolute;
+            bottom: -22px;
+            right: 20px;
+            background: var(--secondary-bg);
+            border: 1px solid var(--primary-accent);
+            box-shadow: 0 12px 30px rgba(14, 165, 233, 0.25);
+            border-radius: 16px;
+            padding: 10px 16px;
+            z-index: 10;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .warranty-icon-box {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient-primary);
+            color: #ffffff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        /* Light Theme Adjustments for Hero */
+        body.light-theme .hero-hud-panel {
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+        }
+
+        body.light-theme .hud-metric-card {
+            background: #F1F5F9;
+            border-color: rgba(0, 0, 0, 0.06);
+        }
+
+        body.light-theme .hud-metric-card:hover {
+            background: #E2E8F0;
+        }
+
+        body.light-theme .hero-service-chips .hero-chip {
+            background: #F1F5F9;
+            color: #334155;
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        body.light-theme .hero-service-chips .hero-chip:hover,
+        body.light-theme .hero-service-chips .hero-chip.active {
+            background: var(--gradient-primary);
+            color: #ffffff !important;
+        }
+
+        body.light-theme .hud-floating-warranty {
+            background: #ffffff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        [dir="rtl"] .hud-in-photo-pill.pos-top-left {
+            left: auto;
+            right: 14px;
+        }
+
+        [dir="rtl"] .hud-in-photo-pill.pos-bottom-right {
+            right: auto;
+            left: 14px;
+        }
+
+        [dir="rtl"] .hud-floating-warranty {
+            right: auto;
+            left: 20px;
         }
 
         .border-gradient {
@@ -81,11 +279,12 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Before &amp; After</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <div class="d-flex gap-2">
@@ -105,74 +304,136 @@
     </nav>
 
     <!-- Section 1: Hero -->
-    <section class="hero-section-alt py-5">
+    <section class="hero-section-alt">
         <div class="hero-glow"></div>
-        <div class="container py-4">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-7 text-center text-lg-start">
-                    <span class="badge bg-secondary-bg border border-color text-primary-accent mb-3 px-3 py-2 rounded-pill fw-bold text-uppercase tracking-wider">
-                        <i class="bi bi-shield-check me-1"></i> EPA-Certified Decontamination
-                    </span>
-                    <h1 class="display-3 fw-extrabold mb-4">
-                        Next-Gen <br><span class="text-gradient">Home Decontamination</span>
-                    </h1>
-                    <p class="lead text-secondary mb-4 pe-lg-4">
-                        Safeguard your family's health with clinical-grade attic cleanouts, contaminated insulation extraction, hospital disinfection, and full crawl space encapsulation.
-                    </p>
-                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-5">
-                        <a href="contact.html" class="btn btn-primary-custom btn-lg px-4">Book Free Inspection</a>
-                        <a href="portfolio.html" class="btn btn-outline-custom btn-lg px-4">View Before &amp; After</a>
+        <div class="container position-relative z-index-1">
+            <div class="row align-items-center g-4 g-lg-5">
+                <!-- Left Column: Core Value Proposition & Action Hub -->
+                <div class="col-lg-6 text-center text-lg-start">
+                    <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-secondary-bg border border-color shadow-sm">
+                        <span class="live-pulse-dot"></span>
+                        <span class="text-xs fw-bold text-uppercase tracking-wider text-primary-accent">Clinical Biohazard &amp; Envelope Defense</span>
                     </div>
-                    <div class="row g-3 text-center text-lg-start">
-                        <div class="col-4">
-                            <div class="glass-card p-3 h-100 d-flex flex-column justify-content-center">
-                                <h3 class="h3 text-gradient mb-1">99.8%</h3>
-                                <p class="text-secondary text-xs mb-0">Allergen Drop</p>
-                            </div>
+
+                    <h1 class="display-3 fw-extrabold mb-3">
+                        Engineered <br>
+                        <span class="text-gradient">Sub-Structure</span> <br>
+                        Decontamination
+                    </h1>
+
+                    <p class="lead text-secondary mb-4 pe-lg-3" style="font-size: clamp(0.98rem, 1.1vw, 1.12rem);">
+                        Stop contaminated attic air and subterranean moisture from circulating through your living spaces. We deploy hospital-grade negative-air HEPA containment, virucidal misting, and 20-mil sealed crawlspace encapsulation.
+                    </p>
+
+                    <!-- Interactive Quick Service Selector Chips -->
+                    <div class="hero-service-chips d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mb-4">
+                        <a href="#revolutionary-features" class="hero-chip active"><i class="bi bi-wind me-1 text-white"></i> HEPA Negative Air</a>
+                        <a href="#revolutionary-features" class="hero-chip"><i class="bi bi-shield-shaded me-1"></i> Virucidal Fogging</a>
+                        <a href="#revolutionary-features" class="hero-chip"><i class="bi bi-shield-lock me-1"></i> 100% Rodent Proof</a>
+                        <a href="#revolutionary-features" class="hero-chip"><i class="bi bi-water me-1"></i> 20-Mil Vapor Barrier</a>
+                    </div>
+
+                    <!-- Dual CTAs -->
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-4">
+                        <a href="contact.html" class="btn btn-primary-custom btn-lg px-4 d-inline-flex align-items-center justify-content-center gap-2">
+                            <i class="bi bi-calendar2-check"></i> Book Free Inspection
+                        </a>
+                        <a href="portfolio.html" class="btn btn-outline-custom btn-lg px-4 d-inline-flex align-items-center justify-content-center gap-2">
+                            <i class="bi bi-images"></i> Before &amp; After Lab
+                        </a>
+                    </div>
+
+                    <!-- Trust Bar & Star Rating -->
+                    <div class="pt-3 border-top border-color d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-lg-start gap-3">
+                        <div class="d-flex text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
                         </div>
-                        <div class="col-4">
-                            <div class="glass-card p-3 h-100 d-flex flex-column justify-content-center">
-                                <h3 class="h3 text-gradient mb-1">100%</h3>
-                                <p class="text-secondary text-xs mb-0">Rodent Exclusion</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="glass-card p-3 h-100 d-flex flex-column justify-content-center">
-                                <h3 class="h3 text-gradient mb-1">&lt; 24h</h3>
-                                <p class="text-secondary text-xs mb-0">Rapid Dispatch</p>
-                            </div>
+                        <div class="text-sm text-secondary">
+                            <span class="fw-bold text-white">4.98/5 Rating</span> &bull; <span class="text-primary-accent fw-medium">1,480+</span> Contaminated Homes Decontaminated
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-5">
-                    <div class="hero-img-container position-relative ps-lg-3">
-                        <!-- Glow behind visual -->
-                        <div class="position-absolute rounded-circle bg-primary-accent opacity-10" style="width: 260px; height: 260px; bottom: -20px; right: -20px; filter: blur(50px); z-index: 0;"></div>
-                        
-                        <!-- Main Image Wrapper -->
-                        <div class="float-animation position-relative z-index-1">
-                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800" 
-                                alt="Attic Inspection & Decontamination" class="main-hero-img img-fluid" style="height: 440px; width: 100%; object-fit: cover;">
+                <!-- Right Column: Environmental Diagnostics & Restoration HUD -->
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="hero-hud-panel glass-card p-4 position-relative">
+                        <!-- HUD Top Bar -->
+                        <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-color">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="live-pulse-dot"></span>
+                                <span class="text-xs fw-bold text-uppercase tracking-wider text-white">Sub-Structure Diagnostic HUD</span>
+                            </div>
+                            <span class="badge bg-secondary-bg border border-color text-primary-accent text-xs px-2 py-1">
+                                <i class="bi bi-patch-check-fill me-1"></i> EPA &amp; IICRC S520
+                            </span>
                         </div>
 
-                        <!-- Unique Animated Floating Badge 1: Pathogen Eradication -->
-                        <div class="hero-floating-badge badge-pos-top-right float-animation-reverse d-flex align-items-center gap-3">
-                            <span class="pulse-indicator"></span>
-                            <div>
-                                <div class="fw-bold text-white text-xs text-uppercase tracking-wider">Biohazard Eradication</div>
-                                <div class="text-primary-accent fw-bold fs-6 mb-0">99.8% Sterilization Active</div>
+                        <!-- Showcase Visual Frame with In-Photo Floating Gauges -->
+                        <div class="hud-visual-card rounded-4 overflow-hidden position-relative mb-3">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=900" 
+                                alt="Attic and Crawl Space Environmental Decontamination" 
+                                class="img-fluid w-100 hud-main-image">
+                            <div class="hud-image-overlay"></div>
+                            
+                            <!-- In-Photo Floating Pill 1 (Top-Left) -->
+                            <div class="hud-in-photo-pill pos-top-left">
+                                <i class="bi bi-wind text-primary-accent"></i>
+                                <span>HEPA Pressure: <strong class="text-white">-0.03 in. W.G.</strong></span>
+                            </div>
+
+                            <!-- In-Photo Floating Pill 2 (Bottom-Right) -->
+                            <div class="hud-in-photo-pill pos-bottom-right">
+                                <i class="bi bi-shield-fill-check text-success"></i>
+                                <span>Envelope Seal: <strong class="text-white">100% Hermetic</strong></span>
                             </div>
                         </div>
 
-                        <!-- Unique Animated Floating Badge 2: Airflow Envelope -->
-                        <div class="hero-floating-badge badge-pos-bottom-left float-slow d-flex align-items-center gap-3">
-                            <div class="rounded-circle p-2 bg-secondary-bg border border-color text-primary-accent d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
-                                <i class="bi bi-wind fs-5"></i>
+                        <!-- Multi-Metric Bento Grid -->
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="hud-metric-card p-3 rounded-3">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <span class="text-xs text-secondary text-uppercase fw-semibold">Particulate Capture</span>
+                                        <i class="bi bi-virus fs-5 text-primary-accent"></i>
+                                    </div>
+                                    <div class="d-flex align-items-baseline gap-2 mb-1">
+                                        <span class="h4 mb-0 fw-bold text-white">99.97%</span>
+                                        <span class="text-xs text-success"><i class="bi bi-arrow-down-right"></i> 0.3µm HEPA</span>
+                                    </div>
+                                    <div class="progress" style="height: 5px; background: rgba(255,255,255,0.08);">
+                                        <div class="progress-bar bg-primary-accent" style="width: 99.97%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="hud-metric-card p-3 rounded-3">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <span class="text-xs text-secondary text-uppercase fw-semibold">Relative Humidity</span>
+                                        <i class="bi bi-moisture fs-5 text-info"></i>
+                                    </div>
+                                    <div class="d-flex align-items-baseline gap-2 mb-1">
+                                        <span class="h4 mb-0 fw-bold text-white">42% RH</span>
+                                        <span class="text-xs text-success"><i class="bi bi-shield-check"></i> Mold Inhibited</span>
+                                    </div>
+                                    <div class="progress" style="height: 5px; background: rgba(255,255,255,0.08);">
+                                        <div class="progress-bar bg-info" style="width: 42%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Warranty Seal (Offset Badge) -->
+                        <div class="hud-floating-warranty d-none d-sm-flex align-items-center gap-3">
+                            <div class="warranty-icon-box">
+                                <i class="bi bi-shield-lock-fill"></i>
                             </div>
                             <div>
-                                <div class="fw-bold text-white text-xs">Stack Effect Barrier</div>
-                                <div class="text-secondary text-xs mb-0">Envelope Hermetically Sealed</div>
+                                <div class="text-xs fw-bold text-white text-uppercase tracking-wider">Lifetime Warranty</div>
+                                <div class="text-xs text-primary-accent fw-bold mb-0">100% Rodent Exclusion</div>
                             </div>
                         </div>
                     </div>
@@ -433,7 +694,12 @@
                     <p class="text-secondary mb-5">How our certified remediation technicians transform contaminated attics and moisture-laden crawl spaces into surgical-grade clean zones.</p>
 
                     <div class="glass-card p-4 mb-4">
-                        <h5 class="mb-3 text-center text-lg-start">Decontamination Steps</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="mb-0 text-center text-lg-start">Decontamination Steps</h5>
+                            <span class="badge bg-secondary-bg border border-color text-primary-accent text-xs">
+                                <i class="bi bi-clock-history me-1"></i> Average Completion: 4–8 Hours (Same-Day)
+                            </span>
+                        </div>
                         <div class="d-flex flex-column flex-lg-row align-items-center align-items-lg-start text-center text-lg-start mb-3">
                             <div class="badge bg-primary-accent text-dark rounded-circle p-2 me-lg-3 mb-2 mb-lg-0">
                                 <span class="fw-bold">1</span>
@@ -608,14 +874,15 @@
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2">
-                    <h5 class="mb-4">Main Navigation</h5>
+                    <h5 class="mb-4">Navigation</h5>
                     <ul class="list-unstyled text-secondary">
                         <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-secondary">About Us</a></li>
                         <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Services</a></li>
                         <li class="mb-2"><a href="portfolio.html" class="text-decoration-none text-secondary">Before &amp; After</a></li>
                         <li class="mb-2"><a href="pricing.html" class="text-decoration-none text-secondary">Pricing</a></li>
                         <li class="mb-2"><a href="blog.html" class="text-decoration-none text-secondary">Blog</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
@@ -636,6 +903,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.hero-service-chips .hero-chip').forEach(chip => {
+            chip.addEventListener('click', function () {
+                document.querySelectorAll('.hero-service-chips .hero-chip').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
+

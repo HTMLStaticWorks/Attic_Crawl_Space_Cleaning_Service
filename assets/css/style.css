@@ -171,7 +171,8 @@ h4, h5, h6, .h4, .h5, .h6 {
 .nav-link {
     color: var(--text-secondary) !important;
     font-weight: 500;
-    margin: 0 10px;
+    margin: 0 4px;
+    font-size: 0.92rem;
     transition: var(--transition);
     position: relative;
     padding-bottom: 6px !important;
@@ -845,3 +846,46 @@ body.light-theme .accordion-button::after {
         text-align: right !important;
     }
 }
+
+/* Social Links in Footer - Consistent Spacing & Sizing */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px !important;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary) !important;
+    font-size: 1.15rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ffffff !important;
+    background: var(--gradient-primary);
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px var(--glow-color);
+}
+
+body.light-theme .social-links a {
+    background: #f1f5f9;
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #475569 !important;
+}
+
+body.light-theme .social-links a:hover {
+    color: #ffffff !important;
+    background: var(--gradient-primary);
+}
+

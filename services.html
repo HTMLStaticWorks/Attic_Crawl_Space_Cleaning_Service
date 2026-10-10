@@ -7,11 +7,140 @@
     <title>Services | Attix - Attic &amp; Crawl Space Cleaning</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
     <meta name="description"
-        content="Explore Attix solutions: Contaminated Insulation Removal, Hospital-Grade Sanitization, Rodent-Proofing, and Vapor Barrier Encapsulation.">
+        content="Explore Attix solutions: Attic Cleaning, Insulation Replacement, Crawl Space Encapsulation, and Rodent Proofing with Before & After proofs and step-by-step restoration process.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        .service-nav-pills {
+            gap: 10px;
+        }
+
+        .service-nav-pills .nav-link {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary) !important;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .service-nav-pills .nav-link:hover,
+        .service-nav-pills .nav-link.active {
+            background: var(--gradient-primary);
+            color: #ffffff !important;
+            border-color: transparent;
+            box-shadow: 0 4px 15px var(--glow-color);
+            transform: translateY(-2px);
+        }
+
+        .service-detail-card {
+            border-radius: 24px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .ba-image-box {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 14px;
+            background: #0b1329;
+            border: 1px solid var(--border-color);
+        }
+
+        .ba-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .ba-image-box:hover img {
+            transform: scale(1.06);
+        }
+
+        .ba-badge-before {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(220, 38, 38, 0.92);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 4px 10px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+            z-index: 2;
+        }
+
+        .ba-badge-after {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(16, 185, 129, 0.92);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 4px 10px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+            z-index: 2;
+        }
+
+        [dir="rtl"] .ba-badge-before,
+        [dir="rtl"] .ba-badge-after {
+            left: auto;
+            right: 10px;
+        }
+
+        .process-step-box {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .process-step-num {
+            width: 44px;
+            height: 44px;
+            background: var(--gradient-primary);
+            color: #ffffff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px var(--glow-color);
+        }
+
+        body.light-theme .service-nav-pills .nav-link {
+            background: #F1F5F9;
+            color: #334155 !important;
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        body.light-theme .service-nav-pills .nav-link:hover,
+        body.light-theme .service-nav-pills .nav-link.active {
+            background: var(--gradient-primary);
+            color: #ffffff !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,11 +159,12 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Before &amp; After</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <div class="d-flex gap-2">
@@ -53,37 +183,37 @@
         </div>
     </nav>
 
-    <!-- Services Header -->
-    <section class="py-5 mt-4">
+    <!-- Services Hero Section -->
+    <header class="py-5 mt-4">
         <div class="container pt-4">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7 text-center text-lg-start">
                     <span class="badge bg-secondary-bg border border-color text-primary-accent mb-3 px-3 py-2 rounded-pill fw-bold text-uppercase tracking-wider">
-                        <i class="bi bi-tools me-1"></i> Surgical Hygiene &amp; Structural Sealing
+                        <i class="bi bi-shield-check me-1"></i> EPA &amp; IICRC S520 Certified Solutions
                     </span>
                     <h1 class="display-3 fw-bold mb-4">
-                        Clinical Decontamination <br><span class="text-gradient">For Your Entire Home</span>
+                        Comprehensive <br><span class="text-gradient">Attic &amp; Crawl Space</span> Services
                     </h1>
                     <p class="text-secondary lead pe-lg-4 mb-4">
-                        We eliminate airborne biological pathogens, extract toxic deteriorated insulation, and seal out rodents with surgical hygiene standards.
+                        We eliminate biological contaminants, extract decayed insulation, seal out rodent intrusions, and encapsulate crawl space foundations to guarantee pristine indoor air quality and lower energy costs.
                     </p>
-                    <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-4">
-                        <span class="badge bg-primary-bg border border-color text-secondary px-3 py-2 rounded-pill">
-                            <i class="bi bi-check2-circle text-primary-accent me-1"></i> Truck-Mounted HEPA Vac
-                        </span>
-                        <span class="badge bg-primary-bg border border-color text-secondary px-3 py-2 rounded-pill">
-                            <i class="bi bi-check2-circle text-primary-accent me-1"></i> EPA Virucide Fogging
-                        </span>
-                        <span class="badge bg-primary-bg border border-color text-secondary px-3 py-2 rounded-pill">
-                            <i class="bi bi-check2-circle text-primary-accent me-1"></i> 20-Mil Vapor Barrier
-                        </span>
-                        <span class="badge bg-primary-bg border border-color text-secondary px-3 py-2 rounded-pill">
-                            <i class="bi bi-check2-circle text-primary-accent me-1"></i> Steel Mesh Exclusion
-                        </span>
+
+                    <!-- Quick Navigation Pill Links -->
+                    <div class="service-nav-pills d-flex flex-wrap justify-content-center justify-content-lg-start mb-4">
+                        <a href="#attic-cleaning" class="nav-link"><i class="bi bi-trash3"></i> Attic Cleaning</a>
+                        <a href="#insulation-replacement" class="nav-link"><i class="bi bi-layers"></i> Insulation Replacement</a>
+                        <a href="#crawl-space-encapsulation" class="nav-link"><i class="bi bi-water"></i> Crawl Encapsulation</a>
+                        <a href="#rodent-proofing" class="nav-link"><i class="bi bi-shield-lock"></i> Rodent Proofing</a>
+                        <a href="#how-it-works" class="nav-link"><i class="bi bi-gear-wide-connected"></i> How It Works</a>
                     </div>
+
                     <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-                        <a href="contact.html" class="btn btn-primary-custom btn-lg px-4">Book Free Inspection</a>
-                        <a href="portfolio.html" class="btn btn-outline-custom btn-lg px-4">See Project Results</a>
+                        <a href="contact.html" class="btn btn-primary-custom btn-lg px-4 d-inline-flex align-items-center justify-content-center gap-2">
+                            <i class="bi bi-calendar-check"></i> Book Free Diagnostic Audit
+                        </a>
+                        <a href="#how-it-works" class="btn btn-outline-custom btn-lg px-4 d-inline-flex align-items-center justify-content-center gap-2">
+                            <i class="bi bi-arrow-down-circle"></i> View Restoration Steps
+                        </a>
                     </div>
                 </div>
 
@@ -92,171 +222,589 @@
                         <div class="position-absolute rounded-circle bg-primary-accent opacity-10" style="width: 260px; height: 260px; bottom: -20px; right: -20px; filter: blur(50px); z-index: 0;"></div>
                         
                         <div class="float-animation position-relative z-index-1">
-                            <img src="https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&q=80&w=800" 
-                                alt="Attic Insulation & Restoration" class="main-hero-img img-fluid" style="height: 440px; width: 100%; object-fit: cover;">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800" 
+                                alt="Attic and Crawl Space Restoration Technician" class="main-hero-img img-fluid" style="height: 440px; width: 100%; object-fit: cover;">
                         </div>
 
-                        <!-- Unique Animated Floating Badge 1: 4-Stage Protocol -->
-                        <div class="hero-floating-badge badge-pos-top-left float-animation-reverse d-flex align-items-center gap-3">
-                            <div class="rounded-circle p-2 bg-secondary-bg border border-color text-primary-accent d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
-                                <i class="bi bi-shield-shaded fs-5"></i>
-                            </div>
-                            <div>
-                                <div class="fw-bold text-white text-xs">4-Stage Defense</div>
-                                <div class="text-primary-accent text-xs fw-bold mb-0">Extract • Fog • Seal • Barrier</div>
-                            </div>
-                        </div>
-
-                        <!-- Unique Animated Floating Badge 2: Negative Pressure Certified -->
-                        <div class="hero-floating-badge badge-pos-bottom-right float-slow d-flex align-items-center gap-3">
+                        <!-- Badge 1: Negative Pressure -->
+                        <div class="hero-floating-badge badge-pos-top-right float-animation-reverse d-flex align-items-center gap-3">
                             <span class="pulse-indicator"></span>
                             <div>
-                                <div class="fw-bold text-white text-xs text-uppercase tracking-wider">Zero Indoor Leakage</div>
-                                <div class="text-secondary text-xs mb-0">100% Negative Air Pressure</div>
+                                <div class="fw-bold text-white text-xs text-uppercase tracking-wider">Zero Indoor Dust</div>
+                                <div class="text-primary-accent text-xs fw-bold mb-0">100% Negative Air Pressure</div>
+                            </div>
+                        </div>
+
+                        <!-- Badge 2: Certified Guarantee -->
+                        <div class="hero-floating-badge badge-pos-bottom-left float-slow d-flex align-items-center gap-3">
+                            <div class="rounded-circle p-2 bg-secondary-bg border border-color text-primary-accent d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                <i class="bi bi-patch-check-fill fs-5"></i>
+                            </div>
+                            <div>
+                                <div class="fw-bold text-white text-xs">Lifetime Warranty</div>
+                                <div class="text-secondary text-xs mb-0">100% Rodent Exclusion</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
+
+    <!-- Quick Needs & Timeline Matrix for Homeowners -->
+    <section class="py-4 bg-secondary-bg border-top border-bottom border-color">
+        <div class="container py-3">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary-accent text-dark fw-bold mb-2 px-3 py-1 rounded-pill text-xs text-uppercase tracking-wider">
+                    <i class="bi bi-stopwatch-fill me-1"></i> Quick Decision Guide
+                </span>
+                <h2 class="h3 fw-bold mb-2">Identify Your Need &amp; <span class="text-gradient">Expected Completion Timeline</span></h2>
+                <p class="text-secondary text-sm max-w-700 mx-auto mb-0">Find your home's current symptoms below to see our certified recommended solution, turnaround time, and direct action.</p>
+            </div>
+
+            <div class="row g-3">
+                <!-- Solution 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="glass-card p-3 h-100 d-flex flex-column justify-content-between border border-color">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-25 text-xs">Symptom</span>
+                                <span class="text-xs text-primary-accent fw-bold"><i class="bi bi-clock-history me-1"></i> 4–6 Hours</span>
+                            </div>
+                            <h5 class="h6 text-white mb-2">Feces, Urine Odors or Mold in Attic</h5>
+                            <p class="text-secondary text-xs mb-3"><strong>Recommended Solution:</strong> Negative-air HEPA cleanout &amp; hospital virucidal fogging.</p>
+                        </div>
+                        <a href="#attic-cleaning" class="btn btn-outline-custom btn-sm w-100">View Attic Decontamination</a>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="glass-card p-3 h-100 d-flex flex-column justify-content-between border border-color">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-25 text-xs">Symptom</span>
+                                <span class="text-xs text-primary-accent fw-bold"><i class="bi bi-clock-history me-1"></i> 1 Day</span>
+                            </div>
+                            <h5 class="h6 text-white mb-2">High HVAC Bills &amp; Drafty Rooms</h5>
+                            <p class="text-secondary text-xs mb-3"><strong>Recommended Solution:</strong> Precision ceiling air sealing + fresh borate-treated R-38 insulation.</p>
+                        </div>
+                        <a href="#insulation-replacement" class="btn btn-outline-custom btn-sm w-100">View Insulation Upgrade</a>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="glass-card p-3 h-100 d-flex flex-column justify-content-between border border-color">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-25 text-xs">Symptom</span>
+                                <span class="text-xs text-primary-accent fw-bold"><i class="bi bi-clock-history me-1"></i> 1–2 Days</span>
+                            </div>
+                            <h5 class="h6 text-white mb-2">Musty Odors &amp; Damp Crawl Space</h5>
+                            <p class="text-secondary text-xs mb-3"><strong>Recommended Solution:</strong> Heavy 20-mil sealed vapor barrier + subfloor moisture control.</p>
+                        </div>
+                        <a href="#crawl-space-encapsulation" class="btn btn-outline-custom btn-sm w-100">View Encapsulation</a>
+                    </div>
+                </div>
+
+                <!-- Solution 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="glass-card p-3 h-100 d-flex flex-column justify-content-between border border-color">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-25 text-xs">Symptom</span>
+                                <span class="text-xs text-primary-accent fw-bold"><i class="bi bi-clock-history me-1"></i> 4–8 Hours</span>
+                            </div>
+                            <h5 class="h6 text-white mb-2">Scratching Sounds &amp; Roofline Gaps</h5>
+                            <p class="text-secondary text-xs mb-3"><strong>Recommended Solution:</strong> 1/4" chew-proof 19-gauge steel hardware cloth exclusion.</p>
+                        </div>
+                        <a href="#rodent-proofing" class="btn btn-outline-custom btn-sm w-100">View Rodent Proofing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Service Sections -->
-    <section class="py-5">
+    <!-- Service 1: Attic Cleaning & Decontamination -->
+    <section class="py-5 my-4" id="attic-cleaning">
         <div class="container">
+            <div class="glass-card p-4 p-md-5 service-detail-card">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-primary-accent text-dark fw-bold px-3 py-2 rounded-pill text-xs text-uppercase tracking-wider">
+                                <i class="bi bi-trash3-fill me-1"></i> Specialized Service 01
+                            </span>
+                            <span class="badge bg-secondary-bg border border-color text-primary-accent fw-bold px-3 py-2 rounded-pill text-xs">
+                                <i class="bi bi-stopwatch-fill me-1"></i> Expected Timeline: 4–6 Hours (Same Day)
+                            </span>
+                        </div>
+                        <h2 class="display-6 fw-bold mb-3">Attic Cleaning &amp; <span class="text-gradient">Biohazard Decontamination</span></h2>
+                        <p class="text-secondary mb-4">
+                            Over time, attics accumulate toxic rodent droppings, urine pheromones, bat guano, toxic mold spores, and compressed fiberglass dust. Our medical-grade negative-air cleanout extracts all biohazards out to exterior vacuum trucks with zero dust infiltration into living quarters.
+                        </p>
+
+                        <!-- Problems Addressed -->
+                        <div class="mb-4">
+                            <h5 class="h6 text-white text-uppercase tracking-wider mb-3"><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Problems Addressed</h5>
+                            <ul class="list-unstyled text-secondary small">
+                                <li class="mb-2 d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>Airborne Pathogen Intrusion:</strong> Rodent feces and urine pheromones entering bedrooms through the stack effect.</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>Persistent Odor Trails:</strong> Territorial pheromone scents that continuously attract new rodent colonies.</span>
+                                </li>
+                                <li class="d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>Mold &amp; Allergen Reservoirs:</strong> High humidity condensation nurturing millions of black mold spores.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Benefits -->
+                        <div class="mb-4">
+                            <h5 class="h6 text-white text-uppercase tracking-wider mb-3"><i class="bi bi-check-circle-fill text-primary-accent me-2"></i>Key Benefits &amp; Results</h5>
+                            <div class="row g-2">
+                                <div class="col-sm-6">
+                                    <div class="bg-secondary-bg p-3 rounded-3 border border-color">
+                                        <div class="text-primary-accent fw-bold small mb-1"><i class="bi bi-wind me-1"></i> HEPA Containment</div>
+                                        <div class="text-secondary text-xs">Exterior negative-pressure vacuuming ensures 0% room dust.</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="bg-secondary-bg p-3 rounded-3 border border-color">
+                                        <div class="text-primary-accent fw-bold small mb-1"><i class="bi bi-shield-shaded me-1"></i> Virucidal Fogging</div>
+                                        <div class="text-secondary text-xs">99.9% biological pathogen and odor neutralization.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="btn btn-primary-custom">Book Attic Cleanout</a>
+                    </div>
+
+                    <!-- Before & After Comparison Visuals -->
+                    <div class="col-lg-6">
+                        <div class="p-3 bg-secondary-bg rounded-4 border border-color">
+                            <h5 class="h6 text-white text-center mb-3 text-uppercase tracking-wider">Before &amp; After: Attic Decontamination</h5>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="ba-image-box">
+                                        <span class="ba-badge-before"><i class="bi bi-exclamation-triangle-fill me-1"></i> Before</span>
+                                        <img src="assets/images/service1-attic-before.jpg"
+                                            alt="Before: Dirty Neglected Attic with Rodent Droppings and Debris">
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <span class="text-xs text-secondary fw-semibold">Contaminated &amp; Feces-Riddled</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="ba-image-box">
+                                        <span class="ba-badge-after"><i class="bi bi-check2-circle me-1"></i> After</span>
+                                        <img src="assets/images/service1-attic-after.jpg"
+                                            alt="After: Clean Sanitized Attic with Vacuumed Joists and Restoration">
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <span class="text-xs text-primary-accent fw-semibold">Hospital Sanitized &amp; Restored</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 p-2 bg-primary-bg rounded-3 text-center border border-color">
+                                <span class="text-xs text-secondary"><i class="bi bi-shield-check text-primary-accent me-1"></i> 100% Biohazard Free &bull; Photo-Verified Clearance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 2: Insulation Replacement & Air Sealing -->
+    <section class="py-5 my-4 bg-secondary-bg" id="insulation-replacement">
+        <div class="container py-4">
+            <div class="glass-card p-4 p-md-5 service-detail-card">
+                <div class="row align-items-center g-5">
+                    <!-- Before & After Comparison Visuals -->
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <div class="p-3 bg-primary-bg rounded-4 border border-color">
+                            <h5 class="h6 text-white text-center mb-3 text-uppercase tracking-wider">Before &amp; After: Thermal Re-Insulation</h5>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="ba-image-box">
+                                        <span class="ba-badge-before"><i class="bi bi-exclamation-triangle-fill me-1"></i> Before</span>
+                                        <img src="assets/images/service2-insulation-before.jpg"
+                                            alt="Before: Deteriorated, Damaged and Compressed Fiberglass Insulation">
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <span class="text-xs text-secondary fw-semibold">R-11 Compressed &amp; Damaged</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="ba-image-box">
+                                        <span class="ba-badge-after"><i class="bi bi-check2-circle me-1"></i> After</span>
+                                        <img src="assets/images/service2-insulation-after.jpg"
+                                            alt="After: Freshly Installed Blown-In Cellulose Thermal Insulation">
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <span class="text-xs text-primary-accent fw-semibold">Fresh R-38 Blown Cellulose</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 p-2 bg-secondary-bg rounded-3 text-center border border-color">
+                                <span class="text-xs text-secondary"><i class="bi bi-lightning-charge-fill text-primary-accent me-1"></i> Saves up to 30% on Monthly HVAC Bills</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-primary-accent text-dark fw-bold px-3 py-2 rounded-pill text-xs text-uppercase tracking-wider">
+                                <i class="bi bi-layers-fill me-1"></i> Specialized Service 02
+                            </span>
+                            <span class="badge bg-secondary-bg border border-color text-primary-accent fw-bold px-3 py-2 rounded-pill text-xs">
+                                <i class="bi bi-stopwatch-fill me-1"></i> Expected Timeline: 1 Day Turnaround
+                            </span>
+                        </div>
+                        <h2 class="display-6 fw-bold mb-3">Insulation Replacement &amp; <span class="text-gradient">Precision Air Sealing</span></h2>
+                        <p class="text-secondary mb-4">
+                            Old, compressed, or rodent-soiled fiberglass loses over 50% of its thermal resistance, driving utility bills sky-high. We vacuum out degraded materials, foam-seal all attic ceiling bypasses, and install fresh, borate-treated R-38 / R-49 insulation.
+                        </p>
+
+                        <!-- Problems Addressed -->
+                        <div class="mb-4">
+                            <h5 class="h6 text-white text-uppercase tracking-wider mb-3"><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Problems Addressed</h5>
+                            <ul class="list-unstyled text-secondary small">
+                                <li class="mb-2 d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>High Heating &amp; Cooling Costs:</strong> Excessive HVAC runtime caused by degraded thermal barriers.</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>Hidden Chimney Air Leaks:</strong> Recessed can lights, plumbing chases, and top plates leaking conditioned air.</span>
+                                </li>
+                                <li class="d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>Hot &amp; Cold Room Inconsistency:</strong> Unbalanced indoor climate and drafty rooms.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Benefits -->
+                        <div class="mb-4">
+                            <h5 class="h6 text-white text-uppercase tracking-wider mb-3"><i class="bi bi-check-circle-fill text-primary-accent me-2"></i>Key Benefits &amp; Results</h5>
+                            <div class="row g-2">
+                                <div class="col-sm-6">
+                                    <div class="bg-primary-bg p-3 rounded-3 border border-color">
+                                        <div class="text-primary-accent fw-bold small mb-1"><i class="bi bi-graph-down-arrow me-1"></i> 30% Energy Savings</div>
+                                        <div class="text-secondary text-xs">Immediate drop in heating and cooling consumption.</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="bg-primary-bg p-3 rounded-3 border border-color">
+                                        <div class="text-primary-accent fw-bold small mb-1"><i class="bi bi-fire me-1"></i> Pest &amp; Fire Retardant</div>
+                                        <div class="text-secondary text-xs">Borate-treated virgin cellulose repels insects &amp; pests.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="btn btn-primary-custom">Schedule Insulation Upgrade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 3: Crawl Space Vapor Barrier Encapsulation -->
+    <section class="py-5 my-4" id="crawl-space-encapsulation">
+        <div class="container">
+            <div class="glass-card p-4 p-md-5 service-detail-card">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-primary-accent text-dark fw-bold px-3 py-2 rounded-pill text-xs text-uppercase tracking-wider">
+                                <i class="bi bi-water me-1"></i> Specialized Service 03
+                            </span>
+                            <span class="badge bg-secondary-bg border border-color text-primary-accent fw-bold px-3 py-2 rounded-pill text-xs">
+                                <i class="bi bi-stopwatch-fill me-1"></i> Expected Timeline: 1–2 Days Turnaround
+                            </span>
+                        </div>
+                        <h2 class="display-6 fw-bold mb-3">Crawl Space <span class="text-gradient">20-Mil Vapor Barrier</span> Encapsulation</h2>
+                        <p class="text-secondary mb-4">
+                            Unsealed dirt crawl spaces act like a continuous sponge, evaporating groundwater and soil gasses upward into your home. We install heavy-gauge 20-mil multi-layer tear-resistant polyethylene barriers sealed hermetically to foundation walls.
+                        </p>
+
+                        <!-- Problems Addressed -->
+                        <div class="mb-4">
+                            <h5 class="h6 text-white text-uppercase tracking-wider mb-3"><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Problems Addressed</h5>
+                            <ul class="list-unstyled text-secondary small">
+                                <li class="mb-2 d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>Groundwater Humidity Evaporation:</strong> High relative humidity (&gt;75%) rotting foundation joists.</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>Soil Radon &amp; Musty Odors:</strong> Dangerous ground gases and earthy mildew seeping into living rooms.</span>
+                                </li>
+                                <li class="d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>Subfloor Wood Rot Fungi:</strong> Timber decay and termite infestations nurtured by damp dirt.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Benefits -->
+                        <div class="mb-4">
+                            <h5 class="h6 text-white text-uppercase tracking-wider mb-3"><i class="bi bi-check-circle-fill text-primary-accent me-2"></i>Key Benefits &amp; Results</h5>
+                            <div class="row g-2">
+                                <div class="col-sm-6">
+                                    <div class="bg-secondary-bg p-3 rounded-3 border border-color">
+                                        <div class="text-primary-accent fw-bold small mb-1"><i class="bi bi-moisture me-1"></i> Sub-50% RH Control</div>
+                                        <div class="text-secondary text-xs">Permanently stops fungal wood decay &amp; joist rotting.</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="bg-secondary-bg p-3 rounded-3 border border-color">
+                                        <div class="text-primary-accent fw-bold small mb-1"><i class="bi bi-shield-lock me-1"></i> 25-Yr Membrane Life</div>
+                                        <div class="text-secondary text-xs">Tear-proof puncture-resistant reinforced polyethylene.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="btn btn-primary-custom">Book Encapsulation Quote</a>
+                    </div>
+
+                    <!-- Before & After Comparison Visuals -->
+                    <div class="col-lg-6">
+                        <div class="p-3 bg-secondary-bg rounded-4 border border-color">
+                            <h5 class="h6 text-white text-center mb-3 text-uppercase tracking-wider">Before &amp; After: Crawl Space Encapsulation</h5>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="ba-image-box">
+                                        <span class="ba-badge-before"><i class="bi bi-droplet-half me-1"></i> Before</span>
+                                        <img src="assets/images/service3-crawl-before.jpg"
+                                            alt="Before: Damp Exposed Crawl Space with High Moisture &amp; Falling Insulation">
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <span class="text-xs text-secondary fw-semibold">Damp Dirt &amp; Wood Rot Risk</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="ba-image-box">
+                                        <span class="ba-badge-after"><i class="bi bi-shield-check me-1"></i> After</span>
+                                        <img src="assets/images/service3-crawl-after.jpg"
+                                            alt="After: Clean White 20-Mil Encapsulated Crawl Space with Sealed Vapor Barrier">
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <span class="text-xs text-primary-accent fw-semibold">100% Sealed 20-Mil Membrane</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 p-2 bg-primary-bg rounded-3 text-center border border-color">
+                                <span class="text-xs text-secondary"><i class="bi bi-droplet-slash text-primary-accent me-1"></i> 0% Standing Water &bull; 25-Year Membrane Warranty</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 4: Rodent Proofing & Structural Exclusion -->
+    <section class="py-5 my-4 bg-secondary-bg" id="rodent-proofing">
+        <div class="container py-4">
+            <div class="glass-card p-4 p-md-5 service-detail-card">
+                <div class="row align-items-center g-5">
+                    <!-- Before & After Comparison Visuals -->
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <div class="p-3 bg-primary-bg rounded-4 border border-color">
+                            <h5 class="h6 text-white text-center mb-3 text-uppercase tracking-wider">Before &amp; After: Structural Rodent Proofing</h5>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="ba-image-box">
+                                        <span class="ba-badge-before"><i class="bi bi-exclamation-triangle-fill me-1"></i> Before</span>
+                                        <img src="assets/images/service4-rodent-before.jpg"
+                                            alt="Before: Unsealed House Foundation Gap and Rodent Entry Hole">
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <span class="text-xs text-secondary fw-semibold">Open Foundation Gap &amp; Burrow</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="ba-image-box">
+                                        <span class="ba-badge-after"><i class="bi bi-shield-lock-fill me-1"></i> After</span>
+                                        <img src="assets/images/service4-rodent-after.jpg"
+                                            alt="After: Galvanized Steel Hardware Cloth Exclusion Barrier Sealed">
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <span class="text-xs text-primary-accent fw-semibold">1/4" Steel Mesh Sealed Barrier</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 p-2 bg-secondary-bg rounded-3 text-center border border-color">
+                                <span class="text-xs text-secondary"><i class="bi bi-patch-check-fill text-primary-accent me-1"></i> 100% Transferable Lifetime Exclusion Warranty</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-primary-accent text-dark fw-bold px-3 py-2 rounded-pill text-xs text-uppercase tracking-wider">
+                                <i class="bi bi-shield-lock-fill me-1"></i> Specialized Service 04
+                            </span>
+                            <span class="badge bg-secondary-bg border border-color text-primary-accent fw-bold px-3 py-2 rounded-pill text-xs">
+                                <i class="bi bi-stopwatch-fill me-1"></i> Expected Timeline: 4–8 Hours Completion
+                            </span>
+                        </div>
+                        <h2 class="display-6 fw-bold mb-3">Rodent Proofing &amp; <span class="text-gradient">Structural Exclusion</span></h2>
+                        <p class="text-secondary mb-4">
+                            Traps and poison only remove current pests—they do not prevent new rodents from entering. We physically seal every roofline breach, soffit gap, crawlspace vent, and utility pipe chase with chew-proof 1/4" galvanized steel mesh and fire-resistant sealant.
+                        </p>
+
+                        <!-- Problems Addressed -->
+                        <div class="mb-4">
+                            <h5 class="h6 text-white text-uppercase tracking-wider mb-3"><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Problems Addressed</h5>
+                            <ul class="list-unstyled text-secondary small">
+                                <li class="mb-2 d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>Recurring Pest Infestations:</strong> Constant re-entry of rats, mice, and squirrels through structural gaps.</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>Electrical Fire Hazards:</strong> Rodents gnawing through live 120V wiring inside wall cavities.</span>
+                                </li>
+                                <li class="d-flex align-items-start gap-2">
+                                    <i class="bi bi-x-circle-fill text-danger mt-1"></i>
+                                    <span><strong>Damaged HVAC Ducting:</strong> Pests puncturing flexible air ducts to nest inside heating channels.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Benefits -->
+                        <div class="mb-4">
+                            <h5 class="h6 text-white text-uppercase tracking-wider mb-3"><i class="bi bi-check-circle-fill text-primary-accent me-2"></i>Key Benefits &amp; Results</h5>
+                            <div class="row g-2">
+                                <div class="col-sm-6">
+                                    <div class="bg-primary-bg p-3 rounded-3 border border-color">
+                                        <div class="text-primary-accent fw-bold small mb-1"><i class="bi bi-shield-check me-1"></i> Chew-Proof 1/4" Steel</div>
+                                        <div class="text-secondary text-xs">Heavy 19-gauge galvanized hardware cloth defense.</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="bg-primary-bg p-3 rounded-3 border border-color">
+                                        <div class="text-primary-accent fw-bold small mb-1"><i class="bi bi-patch-check me-1"></i> Lifetime Warranty</div>
+                                        <div class="text-secondary text-xs">If rodents re-enter sealed points, we return free of charge.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="btn btn-primary-custom">Get Rodent-Proofing Estimate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section: 5-Step Clinical Remediation Process -->
+    <section class="py-5 my-5" id="how-it-works">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="badge bg-secondary-bg border border-color text-primary-accent mb-2 px-3 py-2 rounded-pill fw-bold text-uppercase tracking-wider">
+                    <i class="bi bi-gear-wide-connected me-1"></i> Step-by-Step Restoration
+                </span>
+                <h2 class="display-5 fw-bold mb-3">How It Works: <span class="text-gradient">From Inspection to Completion</span></h2>
+                <p class="text-secondary max-w-700 mx-auto">Our transparent, clinical 5-step workflow guarantees zero indoor contamination and verified structural protection.</p>
+            </div>
+
             <div class="row g-4">
-                <!-- Section 1: Insulation Removal -->
-                <div class="col-lg-6">
-                    <div class="glass-card p-5 h-100 text-center d-flex flex-column align-items-center">
-                        <div class="bg-primary-bg p-4 rounded-circle mb-4 border border-color">
-                            <i class="bi bi-trash3-fill text-primary-accent display-5"></i>
-                        </div>
-                        <h2 class="h3 mb-3">Insulation Removal</h2>
-                        <p class="text-secondary mb-0 max-w-600">Truck-mounted negative-pressure HEPA vacuums safely remove old, compressed, moisture-damaged, or rodent-fouled fiberglass and cellulose directly to exterior containment tanks without indoor contamination.</p>
-                    </div>
-                </div>
-
-                <!-- Section 2: Hospital-Grade Sanitization -->
-                <div class="col-lg-6">
-                    <div class="glass-card p-5 h-100 text-center d-flex flex-column align-items-center">
-                        <div class="bg-primary-bg p-4 rounded-circle mb-4 border border-color">
-                            <i class="bi bi-shield-shaded text-primary-accent display-5"></i>
-                        </div>
-                        <h2 class="h3 mb-3">Sanitization &amp; Disinfection</h2>
-                        <p class="text-secondary mb-0 max-w-600">Hospital-grade ultrasonic fogging with EPA-registered botanical virucides and enzymatic deodorizers that eradicate black mold spores, rodent urine pheromones, bacteria, and allergen reservoirs.</p>
-                    </div>
-                </div>
-
-                <!-- Section 3: Rodent-Proofing -->
-                <div class="col-lg-6">
-                    <div class="glass-card p-5 h-100 text-center d-flex flex-column align-items-center">
-                        <div class="bg-primary-bg p-4 rounded-circle mb-4 border border-color">
-                            <i class="bi bi-shield-lock-fill text-primary-accent display-5"></i>
-                        </div>
-                        <h2 class="h3 mb-3">Rodent-Proofing &amp; Exclusion</h2>
-                        <p class="text-secondary mb-0 max-w-600">Permanent physical exclusion using 1/4" galvanized steel hardware cloth, metal flashings, and pest-resistant expanding polyurethane to seal every crack, soffit vent, and plumbing penetration.</p>
-                    </div>
-                </div>
-
-                <!-- Section 4: Crawl Space Vapor Barrier -->
-                <div class="col-lg-6">
-                    <div class="glass-card p-5 h-100 text-center d-flex flex-column align-items-center">
-                        <div class="bg-primary-bg p-4 rounded-circle mb-4 border border-color">
-                            <i class="bi bi-water text-primary-accent display-5"></i>
-                        </div>
-                        <h2 class="h3 mb-3">Vapor Barrier Encapsulation</h2>
-                        <p class="text-secondary mb-0 max-w-600">Installation of 20-mil multi-layer tear-resistant polyethylene barriers sealed with waterproof tape to isolate dirt floor humidity, stopping dry rot and subterranean moisture intrusion.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Additional Simple Sections -->
-    <!-- Section 5: Air Sealing & Thermal Efficiency -->
-    <section class="py-5 border-top border-color">
-        <div class="container py-5">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <i class="bi bi-wind text-primary-accent fs-1 mb-4 d-block"></i>
-                    <h3 class="display-6 fw-bold mb-4">Precision Air Sealing</h3>
-                    <p class="text-secondary lead">We identify and seal invisible chimney bypasses—such as recessed lighting canisters, furnace flues, electrical conduits, and wall top plates. Halting the stack effect stops toxic subfloor air from entering living spaces and cuts cooling and heating losses by up to 30%.</p>
-                </div>
-                <div class="col-lg-6">
-                    <div class="glass-card p-2">
-                        <img src="https://images.unsplash.com/photo-1505797149-43b0069ec26b?auto=format&fit=crop&q=80&w=800"
-                            class="img-fluid rounded-4 w-100" style="height: 300px; object-fit: cover;" alt="Thermal air sealing and insulation">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 6: HVAC Air Duct Sanitation & Sealing -->
-    <section class="py-5 bg-secondary-bg">
-        <div class="container py-5">
-            <div class="row align-items-center g-5 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <i class="bi bi-fan text-primary-accent fs-1 mb-4 d-block"></i>
-                    <h3 class="display-6 fw-bold mb-4">HVAC Duct Cleaning &amp; Mastic Sealing</h3>
-                    <p class="text-secondary lead">Leaky or contaminated ductwork in unconditioned attics can pull rodent dander, fiberglass glass fibers, and mold spores straight into your HVAC registers. We clean, disinfect, and seal duct joints with fiber-reinforced mastic for pristine airflow.</p>
-                </div>
-                <div class="col-lg-6">
-                    <div class="glass-card p-2">
-                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&q=80&w=800"
-                            class="img-fluid rounded-4" alt="HVAC air duct sanitization">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 7: Crawl Space Moisture & Drainage Control -->
-    <section class="py-5">
-        <div class="container py-5">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <i class="bi bi-droplet-half text-primary-accent fs-1 mb-4 d-block"></i>
-                    <h3 class="display-6 fw-bold mb-4">Moisture Drainage &amp; Sump Systems</h3>
-                    <p class="text-secondary lead">Standing water in a crawl space causes foundation settlement and structural wood rot. We install interior perimeter trench drains, automated cast-iron sump pumps with battery backups, and commercial crawl space dehumidifiers.</p>
-                </div>
-                <div class="col-lg-6">
-                    <div class="glass-card p-2">
-                        <img src="https://images.unsplash.com/photo-1607400201515-c2c41c07d307?auto=format&fit=crop&q=80&w=800"
-                            class="img-fluid rounded-4" alt="Crawl space moisture control">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Integrated Ecosystem Section -->
-    <section class="py-5 bg-secondary-bg">
-        <div class="container py-5">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <h2 class="display-5 mb-4">Complete Home Health <br> <span class="text-gradient">Ecosystem</span></h2>
-                    <p class="text-secondary mb-5">Our decontamination services function as a coordinated defense mechanism, restoring the thermal envelope and purifying the air throughout every level of your house.</p>
-                    <div class="row g-4">
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-camera-fill text-primary-accent fs-3"></i>
-                                <span class="fw-bold">Digital Photo Reports</span>
+                <!-- Step 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="process-step-num">01</div>
+                            <div>
+                                <h4 class="h5 text-white mb-0">Initial Inspection &amp; Audit</h4>
+                                <span class="text-xs text-primary-accent fw-bold">Step 1: Diagnostics</span>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-patch-check-fill text-primary-accent fs-3"></i>
-                                <span class="fw-bold">Lab-Verified Air Quality</span>
-                            </div>
-                        </div>
+                        <p class="text-secondary text-sm mb-0">Our certified inspector conducts a multi-point thermal scan, joist moisture level test, rodent entry mapping, and digital photo inspection to diagnose all hidden hazards.</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="glass-card p-2">
-                        <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&q=80&w=800"
-                            class="img-fluid rounded-4 shadow-lg" alt="Clean indoor environment restoration">
+
+                <!-- Step 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="process-step-num">02</div>
+                            <div>
+                                <h4 class="h5 text-white mb-0">Containment &amp; Isolation</h4>
+                                <span class="text-xs text-primary-accent fw-bold">Step 2: Cleanroom Setup</span>
+                            </div>
+                        </div>
+                        <p class="text-secondary text-sm mb-0">We establish negative-pressure air isolation with zip-sealed cleanroom doorway portals and heavy-duty floor runners to guarantee zero dust or spore infiltration into living areas.</p>
                     </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="process-step-num">03</div>
+                            <div>
+                                <h4 class="h5 text-white mb-0">HEPA Extraction &amp; Fogging</h4>
+                                <span class="text-xs text-primary-accent fw-bold">Step 3: Decontamination</span>
+                            </div>
+                        </div>
+                        <p class="text-secondary text-sm mb-0">Exterior vacuum trucks extract contaminated insulation and rodent debris directly outside, followed by ultrasonic hospital virucidal fogging to neutralize mold and pheromones.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="process-step-num">04</div>
+                            <div>
+                                <h4 class="h5 text-white mb-0">Structural Sealing &amp; Exclusion</h4>
+                                <span class="text-xs text-primary-accent fw-bold">Step 4: Perimeter Defense</span>
+                            </div>
+                        </div>
+                        <p class="text-secondary text-sm mb-0">All roofline gaps, eave vents, crawlspace access points, and plumbing chaseways are locked down with 1/4" galvanized steel hardware cloth, metal flashings, and expanding polymer barriers.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="process-step-num">05</div>
+                            <div>
+                                <h4 class="h5 text-white mb-0">Re-Insulation &amp; Certification</h4>
+                                <span class="text-xs text-primary-accent fw-bold">Step 5: Completion &amp; Warranty</span>
+                            </div>
+                        </div>
+                        <p class="text-secondary text-sm mb-0">Fresh borate-treated R-38 insulation or 20-mil vapor encapsulation is installed. We perform a final air quality check, deliver digital clearance photos, and issue your lifetime warranty.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Box -->
+    <section class="py-5 bg-secondary-bg">
+        <div class="container py-4">
+            <div class="glass-card p-4 p-md-5 text-center position-relative overflow-hidden">
+                <div class="position-absolute" style="width: 300px; height: 300px; background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%); top: -100px; right: -100px; pointer-events: none;"></div>
+                <h2 class="display-5 fw-bold mb-3">Ready for a Cleaner, <span class="text-gradient">Safer Home</span>?</h2>
+                <p class="text-secondary lead max-w-600 mx-auto mb-4">Schedule your free on-site digital inspection today and receive an upfront, transparent restoration plan.</p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="contact.html" class="btn btn-primary-custom btn-lg px-5">Book Free Inspection</a>
+                    <a href="portfolio.html" class="btn btn-outline-custom btn-lg px-5">Explore Before &amp; After Lab</a>
                 </div>
             </div>
         </div>
@@ -283,21 +831,22 @@
                 <div class="col-6 col-lg-2">
                     <h5 class="mb-4">Specialized Services</h5>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Insulation Removal</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Sanitization &amp; Fogging</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Rodent Proofing</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Vapor Barrier Install</a></li>
+                        <li class="mb-2"><a href="services.html#attic-cleaning" class="text-decoration-none text-secondary">Attic Cleaning</a></li>
+                        <li class="mb-2"><a href="services.html#insulation-replacement" class="text-decoration-none text-secondary">Insulation Upgrade</a></li>
+                        <li class="mb-2"><a href="services.html#crawl-space-encapsulation" class="text-decoration-none text-secondary">Crawl Encapsulation</a></li>
+                        <li class="mb-2"><a href="services.html#rodent-proofing" class="text-decoration-none text-secondary">Rodent Proofing</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2">
-                    <h5 class="mb-4">Main Navigation</h5>
+                    <h5 class="mb-4">Navigation</h5>
                     <ul class="list-unstyled text-secondary">
                         <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-secondary">About Us</a></li>
                         <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Services</a></li>
                         <li class="mb-2"><a href="portfolio.html" class="text-decoration-none text-secondary">Before &amp; After</a></li>
                         <li class="mb-2"><a href="pricing.html" class="text-decoration-none text-secondary">Pricing</a></li>
                         <li class="mb-2"><a href="blog.html" class="text-decoration-none text-secondary">Blog</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
@@ -316,6 +865,7 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>

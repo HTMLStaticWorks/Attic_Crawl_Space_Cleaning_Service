@@ -20,6 +20,66 @@
             margin-bottom: 25px;
         }
 
+        .ba-image-box {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 14px;
+            background: #0b1329;
+            border: 1px solid var(--border-color);
+        }
+
+        .ba-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .ba-image-box:hover img {
+            transform: scale(1.06);
+        }
+
+        .ba-badge-before {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(220, 38, 38, 0.92);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 4px 10px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+            z-index: 2;
+        }
+
+        .ba-badge-after {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(16, 185, 129, 0.92);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 4px 10px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+            z-index: 2;
+        }
+
+        [dir="rtl"] .ba-badge-before,
+        [dir="rtl"] .ba-badge-after {
+            left: auto;
+            right: 10px;
+        }
+
         @media (min-width: 992px) and (max-width: 1199.98px) {
             .portfolio-grid-primary>.col-lg-6 {
                 display: flex;
@@ -143,11 +203,12 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link active" href="portfolio.html">Before &amp; After</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <div class="d-flex gap-2">
@@ -202,7 +263,7 @@
                         <div class="position-absolute rounded-circle bg-primary-accent opacity-10" style="width: 260px; height: 260px; bottom: -20px; right: -20px; filter: blur(50px); z-index: 0;"></div>
                         
                         <div class="float-animation position-relative z-index-1">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" 
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800" 
                                 alt="Attic & Crawl Space Restoration Showcase" class="main-hero-img img-fluid" style="height: 440px; width: 100%; object-fit: cover;">
                         </div>
 
@@ -230,14 +291,28 @@
     </section>
 
     <!-- Portfolio Grid -->
-    <section class="py-5">
+    <section class="py-5" id="case-studies">
         <div class="container pb-5">
             <div class="row g-5 portfolio-grid-primary">
                 <!-- Case 1: Rodent Infestation Cleanout -->
                 <div class="col-lg-6">
                     <div class="glass-card p-4 portfolio-card-equal">
-                        <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&q=80&w=800"
-                            class="portfolio-img w-100" alt="Attic Rodent Cleanout and Restoration">
+                        <div class="row g-2 mb-3">
+                            <div class="col-6">
+                                <div class="ba-image-box">
+                                    <span class="ba-badge-before"><i class="bi bi-exclamation-triangle-fill me-1"></i> Before</span>
+                                    <img src="assets/images/service1-attic-before.jpg"
+                                        alt="Before: Severe Rodent Contamination in Attic">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="ba-image-box">
+                                    <span class="ba-badge-after"><i class="bi bi-check2-circle me-1"></i> After</span>
+                                    <img src="assets/images/service1-attic-after.jpg"
+                                        alt="After: Clean Sanitized R-38 Attic Restoration">
+                                </div>
+                            </div>
+                        </div>
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
                                 <span class="badge bg-primary-accent text-dark mb-3">ATTIC DECONTAMINATION</span>
@@ -261,8 +336,22 @@
                 <!-- Case 2: Crawl Space Encapsulation -->
                 <div class="col-lg-6">
                     <div class="glass-card p-4 portfolio-card-equal">
-                        <img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?auto=format&fit=crop&q=80&w=800"
-                            class="portfolio-img w-100" alt="Crawl Space Vapor Barrier Encapsulation">
+                        <div class="row g-2 mb-3">
+                            <div class="col-6">
+                                <div class="ba-image-box">
+                                    <span class="ba-badge-before"><i class="bi bi-droplet-half me-1"></i> Before</span>
+                                    <img src="assets/images/service3-crawl-before.jpg"
+                                        alt="Before: Damp Mud &amp; Moldy Crawl Space Subfloor">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="ba-image-box">
+                                    <span class="ba-badge-after"><i class="bi bi-shield-check me-1"></i> After</span>
+                                    <img src="assets/images/service3-crawl-after.jpg"
+                                        alt="After: 20-Mil Hermetic Crawl Space Vapor Barrier Encapsulation">
+                                </div>
+                            </div>
+                        </div>
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
                                 <span class="badge status-paused text-warning mb-3">CRAWL SPACE ENCAPSULATION</span>
@@ -308,9 +397,21 @@
                                 <a href="contact.html" class="btn btn-primary-custom">Schedule Your Restoration</a>
                             </div>
                             <div class="col-lg-5">
-                                <div class="glass-card p-2 border-0 bg-transparent">
-                                    <img src="https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?auto=format&fit=crop&q=80&w=740"
-                                        class="img-fluid rounded-4 shadow-lg" alt="Attic re-insulation and air sealing">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <div class="ba-image-box" style="height: 270px;">
+                                            <span class="ba-badge-before"><i class="bi bi-exclamation-triangle-fill me-1"></i> Before</span>
+                                            <img src="assets/images/service2-insulation-before.jpg"
+                                                alt="Before: 50-year deteriorated insulation and air leaks">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="ba-image-box" style="height: 270px;">
+                                            <span class="ba-badge-after"><i class="bi bi-check2-circle me-1"></i> After</span>
+                                            <img src="assets/images/service2-insulation-after.jpg"
+                                                alt="After: Hermetically air-sealed attic and R-38 cellulose">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -497,14 +598,15 @@
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2">
-                    <h5 class="mb-4">Main Navigation</h5>
+                    <h5 class="mb-4">Navigation</h5>
                     <ul class="list-unstyled text-secondary">
                         <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-secondary">About Us</a></li>
                         <li class="mb-2"><a href="services.html" class="text-decoration-none text-secondary">Services</a></li>
                         <li class="mb-2"><a href="portfolio.html" class="text-decoration-none text-secondary">Before &amp; After</a></li>
                         <li class="mb-2"><a href="pricing.html" class="text-decoration-none text-secondary">Pricing</a></li>
                         <li class="mb-2"><a href="blog.html" class="text-decoration-none text-secondary">Blog</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
