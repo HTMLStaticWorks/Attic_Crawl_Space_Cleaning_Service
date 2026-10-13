@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Fixed Navbar Helper
+    if (document.querySelector('.navbar-custom')) {
+        document.body.classList.add('has-fixed-navbar');
+    }
+
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const savedTheme = localStorage.getItem('theme');
