@@ -184,6 +184,40 @@
                 line-height: 1.35;
             }
         }
+
+        /* Case Study 3 Metrics Alignment */
+        .case-metric-col {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .case-metric-value {
+            font-size: clamp(1.05rem, 1.8vw, 1.35rem) !important;
+            white-space: nowrap !important;
+            margin-bottom: 0.25rem !important;
+        }
+
+        .case-metric-label {
+            font-size: 0.75rem !important;
+            line-height: 1.35;
+            min-height: 2.8em;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-bottom: 0 !important;
+        }
+
+        @media (min-width: 992px) {
+            .case-metric-col {
+                text-align: left;
+            }
+
+            .case-metric-label {
+                justify-content: flex-start;
+                min-height: auto;
+            }
+        }
     </style>
 </head>
 
@@ -381,17 +415,17 @@
                                 <h2 class="display-6 mb-4">Historic Craftsman Complete Thermal &amp; Hygiene Overhaul</h2>
                                 <p class="text-secondary lead mb-4">Homeowners experienced high heating costs and chronic morning allergic reactions. Our team sealed 42 attic ceiling air penetrations, safely vacuumed 50-year-old deteriorated rockwool, disinfected framing with virucides, and installed radiant barriers with R-38 cellulose.</p>
                                 <div class="row g-2 g-sm-3 g-md-4 mb-5">
-                                    <div class="col-4">
-                                        <h4 class="h5 mb-1 text-primary-accent text-nowrap">32% Drop</h4>
-                                        <p class="text-secondary text-xs">HVAC Energy Costs</p>
+                                    <div class="col-4 case-metric-col">
+                                        <h4 class="h5 mb-1 text-primary-accent text-nowrap case-metric-value">32% Drop</h4>
+                                        <p class="text-secondary text-xs case-metric-label">HVAC Energy Costs</p>
                                     </div>
-                                    <div class="col-4">
-                                        <h4 class="h5 mb-1 text-primary-accent text-nowrap">98% Less</h4>
-                                        <p class="text-secondary text-xs">Airborne Dust &amp; Mold</p>
+                                    <div class="col-4 case-metric-col">
+                                        <h4 class="h5 mb-1 text-primary-accent text-nowrap case-metric-value">98% Less</h4>
+                                        <p class="text-secondary text-xs case-metric-label">Airborne Dust &amp; Mold</p>
                                     </div>
-                                    <div class="col-4">
-                                        <h4 class="h5 mb-1 text-primary-accent text-nowrap">0 Pests</h4>
-                                        <p class="text-secondary text-xs">Rodent Re-entry Since</p>
+                                    <div class="col-4 case-metric-col">
+                                        <h4 class="h5 mb-1 text-primary-accent text-nowrap case-metric-value">0 Pests</h4>
+                                        <p class="text-secondary text-xs case-metric-label">Rodent Re-entry Since</p>
                                     </div>
                                 </div>
                                 <a href="contact.html" class="btn btn-primary-custom">Schedule Your Restoration</a>
